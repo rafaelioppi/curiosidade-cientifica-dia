@@ -74,7 +74,6 @@ h1 {
 
 /* Imagem com moldura e efeito de brilho */
 #imagem {
-  display: none;
   max-width: 80%;
   height: auto;
   aspect-ratio: 16 / 9;
@@ -84,6 +83,11 @@ h1 {
   border: 3px solid #b2ebf2;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Oculta imagem quando atributo hidden está presente */
+#imagem[hidden] {
+  display: none;
 }
 
 #imagem:hover {
