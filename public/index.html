@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
   <title>Curiosidade Científica do Dia</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -8,14 +9,15 @@
   <h1>Curiosidade Científica do Dia</h1>
   <div id="conteudo">Carregando...</div>
   <img id="imagem" src="" alt="Imagem da curiosidade" style="max-width: 100%; margin-top: 20px;">
-  
+
   <script>
-    fetch('posts/post-dia.json')
+    fetch('/post') // ← agora busca da rota dinâmica
       .then(res => res.json())
       .then(data => {
         document.getElementById('conteudo').innerText = data.conteudo;
         if (data.imagem) {
           document.getElementById('imagem').src = data.imagem;
+          document.getElementById('imagem').style.display = 'block';
         } else {
           document.getElementById('imagem').style.display = 'none';
         }
