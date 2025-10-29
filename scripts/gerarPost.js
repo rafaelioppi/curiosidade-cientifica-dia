@@ -47,7 +47,7 @@ async function gerarPost() {
     console.error('❌ Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
   }
 
-  // 3. Salvar post com imagem
+  // 3. Salvar post com imagem (dentro da pasta pública)
   const post = {
     data: new Date().toISOString().split('T')[0],
     conteudo,
@@ -55,7 +55,7 @@ async function gerarPost() {
   };
 
   try {
-    fs.writeFileSync('./posts/post-dia.json', JSON.stringify(post, null, 2));
+    fs.writeFileSync('./public/posts/post-dia.json', JSON.stringify(post, null, 2));
     console.log('✅ Post gerado com sucesso!');
   } catch (err) {
     console.error('❌ Erro ao salvar o post:', err.message);
