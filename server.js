@@ -3,17 +3,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
+const gerarPost = require('./gerarPost'); // sua função que cria o post dinamicamente
 
 app.use(express.static('public'));
 
-app.get('/post', (req, res) => {
-  const postPath = path.join(__dirname, 'posts', 'post-dia.json');
+app.get('/post', async (req, res) => {
   try {
-    const post = fs.readFileSync(postPath, 'utf-8');
+    const novoPost = await gerarPost(); // gera novo conteúdo
     res.setHeader('Content-Type', 'application/json');
-    res.send(post);
+    res.send(novoPost); // envia diretamente o conteúdo gerado
   } catch (err) {
-    res.status(500).json({ erro: 'Não foi possível carregar o post do dia.' });
+    console.error('Erro ao gerar post:', err);
+    res.status(500).json({ erro: 'Não foi possível gerar o post do dia.' });
   }
 });
 
