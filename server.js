@@ -9,8 +9,20 @@ const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
 
+// Helmet com política CSP personalizada
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https://images.unsplash.com"],
+    },
+  })
+);
+
 // Middlewares globais
-app.use(helmet());
 app.use(compression());
 app.use(morgan('tiny'));
 
