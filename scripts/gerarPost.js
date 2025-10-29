@@ -53,7 +53,7 @@ async function gerarPost() {
     imagem
   };
 
-  return post; // retorna como objeto JSON
+  return post;
 }
 
 module.exports = gerarPost;
