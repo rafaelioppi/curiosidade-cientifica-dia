@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');
 const asyncHandler = require('express-async-handler');
+const path = require('path');
 const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
@@ -28,6 +29,11 @@ app.use(morgan('tiny'));
 
 // Arquivos estáticos com cache de 1 dia
 app.use(express.static('public', { maxAge: '1d', etag: true }));
+
+// Rota raiz para Render não retornar erro 502
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Cache em memória para a rota /post
 let cachePost = null;
