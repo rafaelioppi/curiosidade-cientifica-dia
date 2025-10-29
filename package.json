@@ -1,14 +1,16 @@
 {
   "name": "curiosidade-cientifica-dia",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Gera uma curiosidade científica diária com imagem",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "gerar": "node scripts/gerarPost.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["ciência", "curiosidade", "diário"],
+  "author": "rafaelioppi",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.13.1",
     "dotenv": "^17.2.3",
