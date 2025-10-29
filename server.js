@@ -14,12 +14,26 @@ app.use(helmet());
 app.use(compression());
 app.use(morgan('tiny'));
 
-// Arquivos estáticos com cache
+// Arquivos estáticos com cache de 1 dia
 app.use(express.static('public', { maxAge: '1d', etag: true }));
+
+// Cache em memória para a rota /post
+let cachePost = null;
+let cacheTimestamp = 0;
+const CACHE_DURATION = 1000 * 60 * 2; // 2 minutos
 
 // Rota principal
 app.get('/post', asyncHandler(async (req, res) => {
+  const now = Date.now();
+
+  if (cachePost && now - cacheTimestamp < CACHE_DURATION) {
+    return res.json(cachePost);
+  }
+
   const novoPost = await gerarPost();
+  cachePost = novoPost;
+  cacheTimestamp = now;
+
   res.json(novoPost);
 }));
 
@@ -32,5 +46,6 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Porta
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
