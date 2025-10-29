@@ -1,5 +1,4 @@
 require('dotenv').config();
-const fs = require('fs');
 const axios = require('axios');
 
 async function gerarPost() {
@@ -54,7 +53,7 @@ async function gerarPost() {
     imagem
   };
 
-  return JSON.stringify(post, null, 2);
+  return post; // retorna como objeto JSON
 }
 
 module.exports = gerarPost;
