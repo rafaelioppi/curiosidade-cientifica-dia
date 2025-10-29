@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const gerarPost = require('./gerarPost'); // função que cria o post dinamicamente
+const gerarPost = require('./scripts/gerarPost'); // função que cria o post dinamicamente
 
 app.use(express.static('public'));
 
