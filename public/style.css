@@ -66,7 +66,7 @@ h1 {
 /* Imagem com moldura e efeito de brilho */
 #imagem {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
