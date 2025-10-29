@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add posts/post-dia.json
+          git add public/posts/post-dia.json
           git commit -m "🧠 Post automático do dia $(date +'%Y-%m-%d')" || echo "Nada para commitar"
           git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
