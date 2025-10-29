@@ -11,15 +11,15 @@ async function carregarCuriosidade() {
 
     if (data.imagem) {
       imagemEl.src = data.imagem;
-      imagemEl.style.display = 'block';
       imagemEl.loading = 'lazy';
+      imagemEl.removeAttribute('hidden'); // mostra a imagem
     } else {
-      imagemEl.style.display = 'none';
+      imagemEl.setAttribute('hidden', ''); // esconde a imagem
     }
   } catch (err) {
     console.error('❌ Erro ao carregar curiosidade:', err);
     conteudoEl.textContent = 'Erro ao carregar a curiosidade científica.';
-    imagemEl.style.display = 'none';
+    imagemEl.setAttribute('hidden', '');
   }
 }
 
