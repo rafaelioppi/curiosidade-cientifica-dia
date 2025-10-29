@@ -1,0 +1,36 @@
+name: Gerar curiosidade científica diária
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # Executa todo dia às 9h UTC (6h da manhã no Brasil)
+  workflow_dispatch: # Permite execução manual
+
+jobs:
+  gerar-post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Gerar post do dia
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: npm run gerar
+
+      - name: Commit e push do novo post
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add posts/post-dia.json
+          git commit -m "🧠 Post automático do dia $(date +'%Y-%m-%d')"
+          git push
