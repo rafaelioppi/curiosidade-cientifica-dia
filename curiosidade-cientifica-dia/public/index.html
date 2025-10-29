@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curiosidade Científica do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Curiosidade Científica do Dia</h1>
+  <div id="conteudo">Carregando...</div>
+  <img id="imagem" src="" alt="Imagem da curiosidade" style="max-width: 100%; margin-top: 20px;">
+  
+  <script>
+    fetch('/post')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('conteudo').innerText = data.conteudo;
+        if (data.imagem) {
+          document.getElementById('imagem').src = data.imagem;
+        } else {
+          document.getElementById('imagem').style.display = 'none';
+        }
+      });
+  </script>
+</body>
+</html>
