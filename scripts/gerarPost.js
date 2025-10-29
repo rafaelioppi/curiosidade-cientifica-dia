@@ -10,14 +10,18 @@ async function gerarPost() {
   // 1. Gerar texto com Gemini
   try {
     const resposta = await axios.post(
-      'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=' + process.env.GEMINI_API_KEY,
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
       {
         contents: [{ parts: [{ text: prompt }] }]
+      },
+      {
+        headers: { 'Content-Type': 'application/json' },
+        params: { key: process.env.GEMINI_API_KEY }
       }
     );
     conteudo = resposta.data.candidates[0].content.parts[0].text;
   } catch (err) {
-    console.error('Erro ao gerar texto com Gemini:', err.response?.data?.error?.message || err.message);
+    console.error('❌ Erro ao gerar texto com Gemini:', err.response?.data?.error?.message || err.message);
   }
 
   // 2. Buscar imagem com Unsplash
@@ -31,7 +35,7 @@ async function gerarPost() {
     );
     imagem = imagemBusca.data.urls.regular;
   } catch (err) {
-    console.error('Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
+    console.error('❌ Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
   }
 
   // 3. Salvar post com imagem
@@ -45,7 +49,7 @@ async function gerarPost() {
     fs.writeFileSync('./posts/post-dia.json', JSON.stringify(post, null, 2));
     console.log('✅ Post gerado com sucesso!');
   } catch (err) {
-    console.error('Erro ao salvar o post:', err.message);
+    console.error('❌ Erro ao salvar o post:', err.message);
   }
 }
 
