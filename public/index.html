@@ -11,10 +11,7 @@
   <img id="imagem" src="" alt="Imagem da curiosidade" style="max-width: 100%; margin-top: 20px;">
 
   <script>
-    // Adiciona um parâmetro único para evitar cache
-    const url = `/post?_=${Date.now()}`;
-
-    fetch(url)
+    fetch('/post') // ← agora busca da rota dinâmica
       .then(res => res.json())
       .then(data => {
         document.getElementById('conteudo').innerText = data.conteudo;
