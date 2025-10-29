@@ -10,7 +10,7 @@
   <img id="imagem" src="" alt="Imagem da curiosidade" style="max-width: 100%; margin-top: 20px;">
   
   <script>
-    fetch('/post')
+    fetch('posts/post-dia.json')
       .then(res => res.json())
       .then(data => {
         document.getElementById('conteudo').innerText = data.conteudo;
@@ -19,6 +19,11 @@
         } else {
           document.getElementById('imagem').style.display = 'none';
         }
+      })
+      .catch(err => {
+        document.getElementById('conteudo').innerText = 'Erro ao carregar a curiosidade.';
+        document.getElementById('imagem').style.display = 'none';
+        console.error(err);
       });
   </script>
 </body>
