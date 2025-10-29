@@ -2,31 +2,41 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curiosidade Científica do Dia</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Curiosidade Científica do Dia</h1>
-  <div id="conteudo">Carregando...</div>
-  <img id="imagem" src="" alt="Imagem da curiosidade" style="max-width: 100%; margin-top: 20px;">
+  <div id="conteudo">Carregando curiosidade...</div>
+  <img id="imagem" src="" alt="Imagem da curiosidade científica" style="display:none; max-width:100%; margin-top:20px;">
 
   <script>
-    fetch('/post') // ← agora busca da rota dinâmica
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('conteudo').innerText = data.conteudo;
+    async function carregarCuriosidade() {
+      const conteudoEl = document.getElementById('conteudo');
+      const imagemEl = document.getElementById('imagem');
+
+      try {
+        const res = await fetch('/post', { cache: 'no-store' }); // evita conteúdo antigo
+        if (!res.ok) throw new Error('Erro HTTP ' + res.status);
+
+        const data = await res.json();
+        conteudoEl.textContent = data.conteudo || 'Curiosidade não disponível.';
+
         if (data.imagem) {
-          document.getElementById('imagem').src = data.imagem;
-          document.getElementById('imagem').style.display = 'block';
+          imagemEl.src = data.imagem;
+          imagemEl.style.display = 'block';
+          imagemEl.loading = 'lazy'; // carrega imagem só quando aparece
         } else {
-          document.getElementById('imagem').style.display = 'none';
+          imagemEl.style.display = 'none';
         }
-      })
-      .catch(err => {
-        document.getElementById('conteudo').innerText = 'Erro ao carregar a curiosidade.';
-        document.getElementById('imagem').style.display = 'none';
-        console.error(err);
-      });
+      } catch (err) {
+        console.error('❌ Erro ao carregar curiosidade:', err);
+        conteudoEl.textContent = 'Erro ao carregar a curiosidade científica.';
+        imagemEl.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', carregarCuriosidade);
   </script>
 </body>
 </html>
