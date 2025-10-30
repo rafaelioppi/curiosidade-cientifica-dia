@@ -1,18 +1,9 @@
 require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
 const axios = require('axios');
 
-let cachePost = null;
-let cacheTimestamp = 0;
-const CACHE_DURATION = 1000 * 60 * 1; // 1 minuto
-
 async function gerarPost() {
-  const now = Date.now();
-
-  // Retorna post do cache se ainda estiver válido
-  if (cachePost && now - cacheTimestamp < CACHE_DURATION) {
-    return cachePost;
-  }
-
   const prompt = 'Crie uma curiosidade científica curta e interessante.';
   let conteudo = 'Curiosidade não disponível.';
   let imagem = '';
@@ -61,9 +52,23 @@ async function gerarPost() {
     imagem
   };
 
-  // Salva no cache
-  cachePost = post;
-  cacheTimestamp = now;
+  // Caminho do arquivo de histórico
+  const filePath = path.join(__dirname, '../data/posts.json');
+
+  try {
+    let historico = [];
+
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, 'utf-8');
+      historico = JSON.parse(raw);
+    }
+
+    historico.push(post);
+
+    fs.writeFileSync(filePath, JSON.stringify(historico, null, 2));
+  } catch (err) {
+    console.error('❌ Erro ao salvar post no histórico:', err.message);
+  }
 
   return post;
 }

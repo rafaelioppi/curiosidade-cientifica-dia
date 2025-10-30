@@ -6,6 +6,7 @@ const compression = require('compression');
 const morgan = require('morgan');
 const asyncHandler = require('express-async-handler');
 const path = require('path');
+const fs = require('fs');
 const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
@@ -35,24 +36,38 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Cache em memória para curiosidade
-let cachePost = null;
-let cacheTimestamp = 0;
-const CACHE_DURATION = 1000 * 60 * 2; // 2 minutos
-
+// Rota para gerar novo post (sem cache)
 app.get('/post', asyncHandler(async (req, res) => {
-  const now = Date.now();
-
-  if (cachePost && now - cacheTimestamp < CACHE_DURATION) {
-    return res.json(cachePost);
-  }
-
   const novoPost = await gerarPost();
-  cachePost = novoPost;
-  cacheTimestamp = now;
-
   res.json(novoPost);
 }));
+
+// Rota para retornar histórico de posts
+app.get('/historico', (req, res) => {
+  const filePath = path.join(__dirname, 'data/posts.json');
+
+  if (!fs.existsSync(filePath)) {
+    return res.json([]);
+  }
+
+  try {
+    let posts = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+    // Ordena do mais recente para o mais antigo
+    posts.sort((a, b) => new Date(b.data) - new Date(a.data));
+
+    // Filtro opcional por data: /historico?data=2025-10-30
+    const { data } = req.query;
+    if (data) {
+      posts = posts.filter(post => post.data === data);
+    }
+
+    res.json(posts);
+  } catch (err) {
+    console.error('❌ Erro ao ler histórico:', err.message);
+    res.status(500).json({ erro: 'Erro ao ler histórico.' });
+  }
+});
 
 // Tratamento de erro
 app.use((err, req, res, next) => {

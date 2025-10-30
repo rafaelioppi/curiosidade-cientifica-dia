@@ -41,6 +41,7 @@ h1 {
   align-items: center;
 }
 
+/* Cartões de curiosidade */
 .card {
   background-color: #ffffff;
   border: 1px solid #cfd8dc;
@@ -57,12 +58,14 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-#imagem {
+/* Imagem dentro do card */
+.imagem-post {
   display: block;
   width: 100%;
   max-height: 300px;
   object-fit: cover;
   border-radius: 12px;
+  margin-top: 16px;
   border: 1px solid #cfd8dc;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -114,6 +117,7 @@ h1 {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Modo escuro */
 @media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(180deg, #263238, #37474f);
@@ -130,7 +134,7 @@ h1 {
     border-bottom-color: #80deea;
   }
 
-  #imagem {
+  .imagem-post {
     border-color: #90a4ae;
   }
 
@@ -142,4 +146,19 @@ h1 {
   .loader-text {
     color: #80deea;
   }
+}
+.botao-nova {
+  background-color: #00acc1;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-nova:hover {
+  background-color: #007c91;
 }
