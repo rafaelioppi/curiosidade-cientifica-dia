@@ -8,7 +8,7 @@ async function gerarPost() {
   let conteudo = 'Curiosidade não disponível.';
   let imagem = '';
 
-  // Função para gerar texto com Gemini
+  // 🔬 Função para gerar texto com Gemini
   const gerarTextoComGemini = async () => {
     try {
       const resposta = await axios.post(
@@ -20,7 +20,7 @@ async function gerarPost() {
       );
 
       const candidates = resposta.data.candidates;
-      if (candidates && candidates.length > 0) {
+      if (candidates?.length > 0) {
         return candidates[0].content.parts[0].text;
       }
     } catch (err) {
@@ -29,7 +29,7 @@ async function gerarPost() {
     return conteudo;
   };
 
-  // Função para buscar imagem do Unsplash
+  // 🖼️ Função para buscar imagem do Unsplash
   const buscarImagemUnsplash = async () => {
     try {
       const res = await axios.get('https://api.unsplash.com/photos/random', {
@@ -43,8 +43,11 @@ async function gerarPost() {
     }
   };
 
-  // Executa as duas requisições em paralelo
-  [conteudo, imagem] = await Promise.all([gerarTextoComGemini(), buscarImagemUnsplash()]);
+  // 🚀 Executa as duas requisições em paralelo
+  [conteudo, imagem] = await Promise.all([
+    gerarTextoComGemini(),
+    buscarImagemUnsplash()
+  ]);
 
   const post = {
     data: new Date().toISOString().split('T')[0],
@@ -52,7 +55,7 @@ async function gerarPost() {
     imagem
   };
 
-  // Caminho do arquivo de histórico
+  // 📁 Caminho do arquivo de histórico
   const filePath = path.join(__dirname, '../data/posts.json');
 
   try {

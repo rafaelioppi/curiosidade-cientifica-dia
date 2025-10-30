@@ -4,7 +4,7 @@ async function carregarHistorico() {
     const posts = await res.json();
 
     for (const post of posts) {
-      adicionarPostNaPagina(post, false); // não rola ao carregar histórico
+      adicionarPostNaPagina(post, false);
     }
   } catch (err) {
     console.error('❌ Erro ao carregar histórico:', err);
@@ -20,7 +20,6 @@ async function carregarCuriosidade() {
   loaderText.style.display = 'block';
   botaoNova.style.display = 'none';
 
-  // 👇 Cria um espaço visual e rola até ele antes de carregar
   const marcador = document.createElement('div');
   marcador.id = 'marcador-scroll';
   const conteudoEl = document.getElementById('conteudo');
@@ -46,7 +45,7 @@ async function carregarCuriosidade() {
     loaderSpinner.style.display = 'none';
     loaderText.style.display = 'none';
     const marcador = document.getElementById('marcador-scroll');
-    if (marcador) marcador.remove(); // remove o marcador após o uso
+    if (marcador) marcador.remove();
   }
 }
 
@@ -75,19 +74,23 @@ function adicionarPostNaPagina({ data, conteudo, imagem }, rolar = false) {
     postCard.appendChild(img);
   }
 
-  // 👇 Insere no topo da lista
+  // Insere o novo card no topo da lista
   conteudoEl.insertBefore(postCard, conteudoEl.firstChild);
 
+  // Exibe o botão após adicionar a curiosidade
   if (rolar) {
-    document.getElementById('btn-nova').style.display = 'inline-block';
+    const botaoNova = document.getElementById('btn-nova');
+    if (botaoNova) botaoNova.style.display = 'inline-block';
   }
 }
 
+// Inicializa ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
   carregarHistorico();
   carregarCuriosidade();
 });
 
+// Ativa o botão para gerar nova curiosidade
 const botaoNova = document.getElementById('btn-nova');
 if (botaoNova) {
   botaoNova.addEventListener('click', carregarCuriosidade);
