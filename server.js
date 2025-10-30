@@ -13,7 +13,7 @@ const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
 
-// Segurança com Helmet e política CSP personalizada
+// 🔐 Segurança com Helmet e política CSP personalizada
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -26,28 +26,47 @@ app.use(
   })
 );
 
-// Middlewares globais
+// 📁 Garante que a pasta de logs exista
+const logDir = path.join(__dirname, 'logs');
+if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir);
+}
+
+// 📝 Middleware para registrar IP e rota acessada
+app.use((req, res, next) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const timestamp = new Date().toISOString();
+  const log = `[${timestamp}] IP: ${ip} - ${req.method} ${req.originalUrl}\n`;
+
+  fs.appendFile(path.join(logDir, 'acessos.log'), log, (err) => {
+    if (err) console.error('❌ Erro ao registrar acesso:', err.message);
+  });
+
+  next();
+});
+
+// 🌐 Middlewares globais
 app.use(compression());
 app.use(morgan('tiny'));
 
-// Servir arquivos estáticos da pasta public
+// 📦 Servir arquivos estáticos da pasta public
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '1d',
   etag: true
 }));
 
-// Rota principal
+// 🏠 Rota principal
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Rota para gerar novo post (sem cache)
+// 🧠 Rota para gerar novo post
 app.get('/post', asyncHandler(async (req, res) => {
   const novoPost = await gerarPost();
   res.json(novoPost);
 }));
 
-// Rota para retornar histórico de posts
+// 📜 Rota para retornar histórico
 app.get('/historico', (req, res) => {
   const filePath = path.join(__dirname, 'data/posts.json');
 
@@ -57,11 +76,8 @@ app.get('/historico', (req, res) => {
 
   try {
     let posts = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
-    // Ordena do mais recente para o mais antigo
     posts.sort((a, b) => new Date(b.data) - new Date(a.data));
 
-    // Filtro opcional por data: /historico?data=YYYY-MM-DD
     const { data } = req.query;
     if (data) {
       posts = posts.filter(post => post.data === data);
@@ -74,7 +90,25 @@ app.get('/historico', (req, res) => {
   }
 });
 
-// Middleware de tratamento de erros
+// 🔍 Rota para visualizar o log no navegador
+app.get('/ver-log', (req, res) => {
+  const logPath = path.join(logDir, 'acessos.log');
+
+  if (!fs.existsSync(logPath)) {
+    return res.status(404).send('Arquivo de log não encontrado.');
+  }
+
+  try {
+    const conteudo = fs.readFileSync(logPath, 'utf-8');
+    res.setHeader('Content-Type', 'text/plain');
+    res.send(conteudo);
+  } catch (err) {
+    console.error('❌ Erro ao ler o log:', err.message);
+    res.status(500).send('Erro ao ler o log.');
+  }
+});
+
+// ⚠️ Middleware de tratamento de erros
 app.use((err, req, res, next) => {
   console.error('Erro geral:', err);
   res.status(500).json({
@@ -83,21 +117,8 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Inicialização do servidor
+// 🚀 Inicialização do servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
-});
-
-app.use((req, res, next) => {
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  const timestamp = new Date().toISOString();
-
-  const log = `[${timestamp}] IP: ${ip} - ${req.method} ${req.originalUrl}\n`;
-
-  fs.appendFile(path.join(__dirname, 'logs', 'acessos.log'), log, (err) => {
-    if (err) console.error('❌ Erro ao registrar acesso:', err.message);
-  });
-
-  next();
 });
