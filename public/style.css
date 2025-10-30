@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@ html, body {
   background: linear-gradient(180deg, #e0f7fa, #ffffff);
   color: #2c3e50;
   padding: 32px;
-  overflow-x: hidden;
+  /* Removido: overflow-x: hidden; — pode causar problemas em certos layouts, melhor deixar o padrão se não for estritamente necessário */
 }
 
 body {
@@ -92,58 +93,50 @@ h1 {
   text-align: center;
 }
 
-/* Conteúdo */
+/* Conteúdo principal */
 #conteudo {
-  width: min(90vw, 800px);
+  width: min(100%, 90vw);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 64px;
 }
+
+
+
 
 /* Grupo de posts */
-.imagem-post {
-  width: 100%;
-  height: 260px; /* altura aumentada */
-  object-fit: cover; /* mantém proporção e preenche o espaço */
-  border-radius: 16px; /* cantos mais suaves */
-  margin-top: 20px; /* mais espaço do texto */
-  border: 1px solid #cfd8dc;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* sombra um pouco mais suave e profunda */
+.grupo-posts {
+  display: flex;
+  flex-wrap: wrap;
+  /* Corrigido o gap para consistência */
+  gap: 24px; /* Mais simples: 24px tanto na linha quanto na coluna */
+  justify-content: center;
+  align-items: stretch; /* Garante que os cards tenham a mesma altura */
+  width: 70%;
+  margin-bottom: 64px;
+  /* Adicionado min-width para evitar quebra em telas muito estreitas */
+  min-width: 120px;
 }
-
 
 /* Cartões */
 .card {
-  flex: 1 1 calc(50% - 24px); /* ocupa metade da linha menos o gap */
-  max-width: calc(50% - 24px);
-  background-color: #ffffff;
-  border: 1px solid #cfd8dc;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding:10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Flex-basis para definir o tamanho base: 50% - metade do gap */
+  /* Isso garante que dois cards caibam na linha com o gap definido */
+  flex: 1 1 calc(50% - 12px); /* 12px é metade do gap de 24px (24px / 2 = 12px) */
+  max-width: calc(50% - 12px); /* Limita o tamanho máximo também */
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 440px;
-  box-sizing: border-box;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #2c3e50;
-  text-align: justify;
-  gap: 20px;
+  align-items: stretch;
+  /* Adicionado estilos visuais para o card */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
 }
-
-.card p {
-  margin: 0;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #2c3e50;
-  text-align: justify;
-}
-
 
 .card:hover {
   transform: translateY(-4px);
@@ -151,48 +144,48 @@ h1 {
 }
 
 /* Imagem */
-/* Grupo de posts */
-.grupo-posts {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;  /* espaço horizontal entre os dois cards */
-  row-gap: 48px;     /* espaço vertical entre linhas */
-  justify-content: center;
+.card img {
   width: 100%;
-  margin-bottom: 64px;
+  /* Removido max-width: 100%; — já está implícito pelo width: 100%; */
+  height: 260px;
+  object-fit: contain;
+  border-radius: 12px; /* Ligeiramente menor para se adequar ao padding do card */
+  border: 1px solid #cfd8dc;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: block;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #f7feff, #ffffff);
+}
+
+/* Texto */
+.card p {
+  margin: 0;
+  padding: 12px; /* Adicionado um padding para o texto */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2c3e50;
+  text-align: center;
+  flex-grow: 1; /* Garante que o parágrafo preencha o espaço restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Removido align-items: stretch; — redundante aqui */
+  border-radius: 8px; /* Borda suave para o texto */
+  background: linear-gradient(135deg, #f7feff, #ffffff);
 }
 
 
-
-
-/* Animações */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes dots {
-  0% { content: ''; }
-  33% { content: '.'; }
-  66% { content: '..'; }
-  100% { content: '...'; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsividade */
+/* Responsivo: Tela pequena (1 coluna) */
 @media (max-width: 768px) {
   .card {
+    /* Flex-basis para 100% da largura em telas pequenas */
     flex: 1 1 100%;
     max-width: 100%;
   }
 }
 
-/* Modo escuro */
+/* Modo escuro (mantido) */
 @media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(180deg, #263238, #37474f);
@@ -201,7 +194,7 @@ h1 {
 
   .card {
     background-color: #455a64;
-    border-color: #607d8b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais escura */
   }
 
   h1 {
@@ -209,8 +202,14 @@ h1 {
     border-bottom-color: #80deea;
   }
 
-  .imagem-post {
+  .card img {
     border-color: #90a4ae;
+    background: linear-gradient(135deg, #37474f, #455a64);
+  }
+
+  .card p {
+    color: #eceff1;
+    background: linear-gradient(135deg, #37474f, #455a64);
   }
 
   .spinner {
@@ -231,7 +230,19 @@ h1 {
   }
 }
 
-/* Transições suaves */
+/* Animações (mantidas) */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Transições suaves (mantidas) */
 body, .card, .botao-nova, .loader-text {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
