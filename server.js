@@ -1,4 +1,6 @@
-if (process.env.NODE_ENV !== 'production') require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const express = require('express');
 const helmet = require('helmet');
@@ -11,15 +13,15 @@ const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
 
-// Helmet com política CSP ajustada para permitir estilos e fontes externas
+// Segurança com Helmet e política CSP personalizada
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https://images.unsplash.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+      imgSrc: ["'self'", 'data:', 'https://images.unsplash.com'],
     },
   })
 );
@@ -29,9 +31,12 @@ app.use(compression());
 app.use(morgan('tiny'));
 
 // Servir arquivos estáticos da pasta public
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1d', etag: true }));
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '1d',
+  etag: true
+}));
 
-// Rota raiz
+// Rota principal
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
@@ -56,7 +61,7 @@ app.get('/historico', (req, res) => {
     // Ordena do mais recente para o mais antigo
     posts.sort((a, b) => new Date(b.data) - new Date(a.data));
 
-    // Filtro opcional por data: /historico?data=2025-10-30
+    // Filtro opcional por data: /historico?data=YYYY-MM-DD
     const { data } = req.query;
     if (data) {
       posts = posts.filter(post => post.data === data);
@@ -69,7 +74,7 @@ app.get('/historico', (req, res) => {
   }
 });
 
-// Tratamento de erro
+// Middleware de tratamento de erros
 app.use((err, req, res, next) => {
   console.error('Erro geral:', err);
   res.status(500).json({
@@ -80,4 +85,6 @@ app.use((err, req, res, next) => {
 
 // Inicialização do servidor
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+});
