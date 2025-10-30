@@ -2,31 +2,16 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curiosidade Científica do Dia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Curiosidade Científica do Dia</h1>
-  <div id="conteudo">Carregando...</div>
-  <img id="imagem" src="" alt="Imagem da curiosidade" style="max-width: 100%; margin-top: 20px;">
-
-  <script>
-    fetch('/post') // ← agora busca da rota dinâmica
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('conteudo').innerText = data.conteudo;
-        if (data.imagem) {
-          document.getElementById('imagem').src = data.imagem;
-          document.getElementById('imagem').style.display = 'block';
-        } else {
-          document.getElementById('imagem').style.display = 'none';
-        }
-      })
-      .catch(err => {
-        document.getElementById('conteudo').innerText = 'Erro ao carregar a curiosidade.';
-        document.getElementById('imagem').style.display = 'none';
-        console.error(err);
-      });
-  </script>
+  <main id="container">
+    <h1>Curiosidade Científica do Dia</h1>
+    <div id="conteudo">Carregando curiosidade...</div>
+    <img id="imagem" src="" alt="Imagem da curiosidade científica" hidden>
+  </main>
+  <script src="main.js"></script>
 </body>
 </html>
