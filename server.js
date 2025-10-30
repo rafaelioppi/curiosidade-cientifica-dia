@@ -88,3 +88,16 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
 });
+
+app.use((req, res, next) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const timestamp = new Date().toISOString();
+
+  const log = `[${timestamp}] IP: ${ip} - ${req.method} ${req.originalUrl}\n`;
+
+  fs.appendFile(path.join(__dirname, 'logs', 'acessos.log'), log, (err) => {
+    if (err) console.error('❌ Erro ao registrar acesso:', err.message);
+  });
+
+  next();
+});
