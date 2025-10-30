@@ -32,10 +32,10 @@ if (!fs.existsSync(logDir)) {
   fs.mkdirSync(logDir);
 }
 
-// 📝 Middleware para registrar IP e rota acessada
+// 📝 Middleware para registrar IP e rota acessada com horário local
 app.use((req, res, next) => {
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  const timestamp = new Date().toISOString();
+  const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
+  const timestamp = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
   const log = `[${timestamp}] IP: ${ip} - ${req.method} ${req.originalUrl}\n`;
 
   fs.appendFile(path.join(logDir, 'acessos.log'), log, (err) => {
@@ -90,7 +90,7 @@ app.get('/historico', (req, res) => {
   }
 });
 
-// 🔍 Rota para visualizar o log no navegador
+// 🔍 Rota para visualizar o log no navegador com formatação
 app.get('/ver-log', (req, res) => {
   const logPath = path.join(logDir, 'acessos.log');
 
@@ -100,8 +100,8 @@ app.get('/ver-log', (req, res) => {
 
   try {
     const conteudo = fs.readFileSync(logPath, 'utf-8');
-    res.setHeader('Content-Type', 'text/plain');
-    res.send(conteudo);
+    res.setHeader('Content-Type', 'text/html');
+    res.send(`<pre>${conteudo}</pre>`);
   } catch (err) {
     console.error('❌ Erro ao ler o log:', err.message);
     res.status(500).send('Erro ao ler o log.');
