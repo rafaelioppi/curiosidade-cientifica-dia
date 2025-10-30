@@ -1,25 +1,26 @@
 async function carregarCuriosidade() {
-  const conteudoEl = document.getElementById('conteudo');
+  const textoEl = document.getElementById('texto');
   const imagemEl = document.getElementById('imagem');
 
   try {
     const res = await fetch('/post', { cache: 'no-store' });
     if (!res.ok) throw new Error('Erro HTTP ' + res.status);
 
-    const data = await res.json();
-    conteudoEl.textContent = data.conteudo || 'Curiosidade não disponível.';
+    const { conteudo, imagem } = await res.json();
 
-    if (data.imagem) {
-      imagemEl.src = data.imagem;
+    textoEl.textContent = conteudo || 'Curiosidade não disponível.';
+
+    if (imagem) {
+      imagemEl.src = imagem;
       imagemEl.loading = 'lazy';
-      imagemEl.removeAttribute('hidden'); // mostra a imagem
+      imagemEl.hidden = false;
     } else {
-      imagemEl.setAttribute('hidden', ''); // esconde a imagem
+      imagemEl.hidden = true;
     }
   } catch (err) {
     console.error('❌ Erro ao carregar curiosidade:', err);
-    conteudoEl.textContent = 'Erro ao carregar a curiosidade científica.';
-    imagemEl.setAttribute('hidden', '');
+    textoEl.textContent = 'Erro ao carregar a curiosidade científica.';
+    imagemEl.hidden = true;
   }
 }
 

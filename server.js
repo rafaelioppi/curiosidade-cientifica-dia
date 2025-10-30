@@ -10,13 +10,13 @@ const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
 
-// Helmet com política CSP personalizada
+// Helmet com política CSP ajustada para permitir estilos e fontes externas
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'"],
-      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https://images.unsplash.com"],
     },
@@ -27,20 +27,19 @@ app.use(
 app.use(compression());
 app.use(morgan('tiny'));
 
-// Arquivos estáticos com cache de 1 dia
-app.use(express.static('public', { maxAge: '1d', etag: true }));
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1d', etag: true }));
 
-// Rota raiz para Render não retornar erro 502
+// Rota raiz
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Cache em memória para a rota /post
+// Cache em memória para curiosidade
 let cachePost = null;
 let cacheTimestamp = 0;
 const CACHE_DURATION = 1000 * 60 * 2; // 2 minutos
 
-// Rota principal
 app.get('/post', asyncHandler(async (req, res) => {
   const now = Date.now();
 
@@ -55,7 +54,7 @@ app.get('/post', asyncHandler(async (req, res) => {
   res.json(novoPost);
 }));
 
-// Erro genérico
+// Tratamento de erro
 app.use((err, req, res, next) => {
   console.error('Erro geral:', err);
   res.status(500).json({
@@ -64,6 +63,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Porta
+// Inicialização do servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
