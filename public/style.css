@@ -1,103 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  color: #2c3e50;
+/* =============================== */
+/* 1. Variáveis Globais e Tema    */
+/* =============================== */
+:root {
+  --font-base: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --color-bg: linear-gradient(180deg, #e0f7fa 0%, #ffffff 100%);
+  --color-bg-dark: linear-gradient(180deg, #263238 0%, #37474f 100%);
+  --color-text: #2c3e50;
+  --color-text-dark: #eceff1;
+  --color-primary: #00acc1;
+  --color-primary-dark: #80deea;
+  --color-card: #ffffff;
+  --color-card-dark: #455a64;
+  --color-border: #cfd8dc;
+  --color-border-dark: #607d8b;
+
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================== */
+/* 2. Reset e Estrutura            */
+/* =============================== */
+* {
   margin: 0;
-  padding: 20px;
-  background: linear-gradient(180deg, #e0f7fa 0%, #ffffff 100%);
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Título centralizado e elegante */
-h1 {
-  color: #006064;
+html, body {
+  height: 100%;
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--space-lg);
+}
+
+/* =============================== */
+/* 3. Cabeçalho                    */
+/* =============================== */
+.header-container {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: clamp(1.8rem, 2.5vw, 3rem);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  border-bottom: 2px solid var(--color-primary);
-  display: inline-block;
-  padding-bottom: 4px;
+  margin-bottom: var(--space-lg);
 }
 
-/* Container com limite de altura e rolagem interna */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: var(--space-xs);
+}
+
+/* =============================== */
+/* 4. Conteúdo Central             */
+/* =============================== */
 #conteudo {
-  background-color: #ffffff;
-  border: 2px solid var(--color-border);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: min(90vw, 700px);
-  margin: 0 auto;
-  font-size: clamp(1rem, 1.3vw, 1.3em);
-  line-height: 1.7;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  width: min(90vw, 800px);
+  padding: var(--space-lg);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.6;
   position: relative;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
 #conteudo::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px dashed #80deea;
-  border-radius: 14px;
+  inset: -6px;
+  border: 2px dashed var(--color-primary);
+  border-radius: 20px;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.2;
   transition: opacity 0.3s ease;
 }
 
 #conteudo:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-color: #00acc1;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
 }
 
 #conteudo:hover::before {
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
-/* Imagem com limite proporcional à tela */
+/* =============================== */
+/* 5. Imagem Responsiva            */
+/* =============================== */
 #imagem {
   display: block;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid var(--color-border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 12px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #imagem:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transform: scale(1.02);
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Modo escuro automático */
+/* =============================== */
+/* 6. Modo Escuro Automático       */
+/* =============================== */
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(180deg, var(--color-bg-dark), #37474f);
+    background: var(--color-bg-dark);
     color: var(--color-text-dark);
   }
 
   #conteudo {
-    background-color: #455a64;
+    background-color: var(--color-card-dark);
     border-color: var(--color-border-dark);
   }
 
+  #conteudo::before {
+    border-color: var(--color-primary-dark);
+  }
+
   h1 {
-    color: #80deea;
+    color: var(--color-primary-dark);
     border-bottom-color: var(--color-primary-dark);
   }
 
   #imagem {
-    border-color: #90a4ae;
+    border-color: var(--color-border-dark);
   }
 }
