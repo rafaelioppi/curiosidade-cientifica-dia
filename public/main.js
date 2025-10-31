@@ -1,112 +1,97 @@
 let todosOsPosts = [];
 
-function renderizarGrupos(posts) {
+function renderizarPosts(posts) {
   const conteudoEl = document.getElementById('conteudo');
-  conteudoEl.innerHTML = ''; // limpa todos os grupos
+  conteudoEl.innerHTML = '';
 
-  for (let i = 0; i < posts.length; i += 2) {
-    const grupo = posts.slice(i, i + 2);
-    adicionarGrupoNaPagina(grupo);
-  }
+  posts.forEach(post => {
+    const col = document.createElement('div');
+    col.className = 'col-card';
+
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'card-content-wrapper';
+
+    // Data e hora formatada
+    if (post.data) {
+      const dataOriginal = new Date(post.data);
+      const dataBR = dataOriginal.toLocaleString('pt-BR', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'America/Sao_Paulo'
+      });
+
+      const dataEl = document.createElement('p');
+      dataEl.className = 'card-date';
+      dataEl.textContent = dataBR.replace(' de ', ' • '); // ex: "30 out • 14:30"
+      dataEl.style.fontSize = '0.85rem';
+      dataEl.style.color = '#555';
+      dataEl.style.marginBottom = '0.5rem';
+      wrapper.appendChild(dataEl);
+    }
+
+    // Texto do post
+    const texto = document.createElement('p');
+    texto.className = 'card-text';
+    texto.textContent = post.conteudo;
+    wrapper.appendChild(texto);
+
+    // Imagem, se houver
+    if (post.imagem) {
+      const img = document.createElement('img');
+      img.src = post.imagem;
+      img.alt = 'Imagem da curiosidade';
+      img.className = 'imagem-post';
+      wrapper.appendChild(img);
+    }
+
+    card.appendChild(wrapper);
+    col.appendChild(card);
+    conteudoEl.appendChild(col);
+  });
 }
 
+// Carregar histórico
 async function carregarHistorico() {
   try {
     const res = await fetch('/historico');
+    if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
     todosOsPosts = await res.json();
-    renderizarGrupos(todosOsPosts);
+    renderizarPosts(todosOsPosts);
   } catch (err) {
     console.error('❌ Erro ao carregar histórico:', err);
   }
 }
 
+// Carregar nova curiosidade
 async function carregarCuriosidade() {
-  const loaderSpinner = document.getElementById('loader-spinner');
-  const loaderText = document.getElementById('loader-text');
+  const loaderWrapper = document.getElementById('loader-wrapper');
   const botaoNova = document.getElementById('btn-nova');
 
-  loaderSpinner.style.display = 'block';
-  loaderText.style.display = 'block';
+  loaderWrapper.style.display = 'block';
   botaoNova.style.display = 'none';
-
-  const marcador = document.createElement('div');
-  marcador.id = 'marcador-scroll';
-  const conteudoEl = document.getElementById('conteudo');
-  conteudoEl.insertBefore(marcador, conteudoEl.firstChild);
-  marcador.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   try {
     const res = await fetch('/post', { cache: 'no-store' });
-    if (!res.ok) throw new Error('Erro HTTP ' + res.status);
-
+    if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
     const post = await res.json();
-    todosOsPosts.unshift(post); // adiciona ao início
-    renderizarGrupos(todosOsPosts);
+    todosOsPosts.unshift(post);
+    renderizarPosts(todosOsPosts);
   } catch (err) {
     console.error('❌ Erro ao carregar curiosidade:', err);
-    const hoje = new Date();
-    const dataFallback = hoje.toISOString().split('T')[0];
-    const postErro = {
-      data: dataFallback,
-      conteudo: 'Erro ao carregar a curiosidade científica.',
-      imagem: ''
-    };
-    todosOsPosts.unshift(postErro);
-    renderizarGrupos(todosOsPosts);
   } finally {
-    loaderSpinner.style.display = 'none';
-    loaderText.style.display = 'none';
-    const marcador = document.getElementById('marcador-scroll');
-    if (marcador) marcador.remove();
-
-    const botaoNova = document.getElementById('btn-nova');
-    if (botaoNova) botaoNova.style.display = 'inline-block';
+    loaderWrapper.style.display = 'none';
+    botaoNova.style.display = 'inline-block';
   }
 }
 
-function adicionarGrupoNaPagina(grupo) {
-  const conteudoEl = document.getElementById('conteudo');
-
-  const grupoContainer = document.createElement('div');
-  grupoContainer.className = 'grupo-posts';
-
-  for (const post of grupo) {
-    const postCard = document.createElement('div');
-    postCard.className = 'card';
-
-    const texto = document.createElement('p');
-    const [ano, mes, dia] = post.data.split('-');
-    const dataFormatada = `${dia}/${mes}/${ano}`;
-    const horaFormatada = new Date().toLocaleTimeString('pt-BR', {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-
-    texto.textContent = `${dataFormatada} ${horaFormatada} — ${post.conteudo}`;
-    postCard.appendChild(texto);
-
-    if (post.imagem) {
-      const img = document.createElement('img');
-      img.src = post.imagem;
-      img.alt = 'Imagem da curiosidade científica';
-      img.className = 'imagem-post';
-      postCard.appendChild(img);
-    }
-
-    grupoContainer.appendChild(postCard);
-  }
-
-  conteudoEl.appendChild(grupoContainer);
-}
-
-// Inicializa ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
   carregarHistorico();
-  carregarCuriosidade();
+  document.getElementById('btn-nova').addEventListener('click', carregarCuriosidade);
 });
-
-// Ativa o botão para gerar nova curiosidade
-const botaoNova = document.getElementById('btn-nova');
-if (botaoNova) {
-  botaoNova.addEventListener('click', carregarCuriosidade);
-}

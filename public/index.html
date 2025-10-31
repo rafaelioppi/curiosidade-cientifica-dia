@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Curiosidade Científica do Dia</title>
-  <link rel="stylesheet" href="/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,"> <!-- Evita erro 404 do favicon -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- Bootstrap local -->
+  <link rel="stylesheet" href="/style.css"> <!-- Seu CSS personalizado -->
 </head>
-<body>
-  <div class="page-wrapper">
-    <header class="header-container">
-      <h1>Curiosidade Científica do Dia</h1>
-    </header>
 
-    <div class="botao-wrapper">
-      <button id="btn-nova" class="botao-nova">Nova curiosidade</button>
+<body class="bg-light">
+  <div class="container py-5">
+
+    <!-- Cabeçalho -->
+    <div class="text-center mb-5">
+      <h1 class="text-primary">Curiosidade Científica do Dia</h1>
     </div>
 
-    <div class="loader-wrapper">
-      <div id="loader-spinner" class="spinner"></div>
-      <div id="loader-text" class="loader-text">Gerando curiosidade<span class="dots"></span></div>
+    <!-- Botão Nova Curiosidade -->
+    <div class="text-center mb-4">
+      <button id="btn-nova" class="btn btn-primary btn-lg">Nova curiosidade</button>
     </div>
 
-    <main id="conteudo">
-      <!-- Os posts serão adicionados aqui dinamicamente -->
-    </main>
+    <!-- Loader -->
+    <div class="text-center mb-4" id="loader-wrapper" style="display: none;">
+      <div id="loader-spinner" class="spinner-border text-primary" role="status"></div>
+      <div id="loader-text" class="mt-2">
+        Gerando curiosidade<span class="dots"></span>
+      </div>
+    </div>
+
+    <!-- Conteúdo dos Cards -->
+    <div id="conteudo" class="d-flex flex-wrap justify-content-center gap-3">
+      <!-- Cards serão adicionados dinamicamente pelo main.js -->
+    </div>
+
+    <!-- Paginação (opcional) -->
+    <div class="text-center mt-4" id="paginacao"></div>
+
   </div>
 
   <script src="/main.js"></script>
