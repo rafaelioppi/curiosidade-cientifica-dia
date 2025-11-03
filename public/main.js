@@ -29,7 +29,7 @@ function renderizarPosts(posts) {
 
       const dataEl = document.createElement('p');
       dataEl.className = 'card-date';
-      dataEl.textContent = dataBR.replace(' de ', ' • '); // ex: "30 out • 14:30"
+      dataEl.textContent = dataBR.replace(' de ', ' • ');
       dataEl.style.fontSize = '0.85rem';
       dataEl.style.color = '#555';
       dataEl.style.marginBottom = '0.5rem';
@@ -69,16 +69,24 @@ async function carregarHistorico() {
   }
 }
 
-// Carregar nova curiosidade
+// Carregar nova curiosidade com assunto
 async function carregarCuriosidade() {
   const loaderWrapper = document.getElementById('loader-wrapper');
   const botaoNova = document.getElementById('btn-nova');
+  const campoAssunto = document.getElementById('campo-assunto');
+  const assunto = campoAssunto?.value?.trim() || '';
 
   loaderWrapper.style.display = 'block';
   botaoNova.style.display = 'none';
 
   try {
-    const res = await fetch('/post', { cache: 'no-store' });
+    const res = await fetch('/post', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ assunto }),
+      cache: 'no-store'
+    });
+
     if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
     const post = await res.json();
     todosOsPosts.unshift(post);

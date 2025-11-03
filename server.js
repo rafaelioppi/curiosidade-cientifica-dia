@@ -13,6 +13,9 @@ const gerarPost = require('./scripts/gerarPost');
 
 const app = express();
 
+// 🧠 Permite leitura de JSON no corpo da requisição
+app.use(express.json());
+
 // 🔐 Segurança com Helmet e política CSP personalizada
 app.use(
   helmet.contentSecurityPolicy({
@@ -60,9 +63,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// 🧠 Rota para gerar novo post
-app.get('/post', asyncHandler(async (req, res) => {
-  const novoPost = await gerarPost();
+// 🧠 Rota para gerar novo post com assunto
+app.post('/post', asyncHandler(async (req, res) => {
+  const { assunto } = req.body;
+  const novoPost = await gerarPost(assunto);
   res.json(novoPost);
 }));
 

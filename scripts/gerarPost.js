@@ -3,8 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-async function gerarPost() {
-  const prompt = 'Crie uma curiosidade científica curta e interessante.';
+async function gerarPost(assunto = '') {
+  const tema = assunto.trim() ? ` sobre ${assunto.trim()}` : '';
+  const prompt = `Crie uma curiosidade científica curta e interessante${tema}.`;
   let conteudo = 'Curiosidade não disponível.';
   let imagem = '';
 
@@ -29,7 +30,7 @@ async function gerarPost() {
   const buscarImagemUnsplash = async () => {
     try {
       const res = await axios.get('https://api.unsplash.com/photos/random', {
-        params: { query: 'science', orientation: 'landscape' },
+        params: { query: assunto || 'science', orientation: 'landscape' },
         headers: { Authorization: 'Client-ID ' + process.env.UNSPLASH_ACCESS_KEY }
       });
       return res.data.urls.regular;
