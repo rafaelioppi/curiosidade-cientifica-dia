@@ -8,6 +8,8 @@ on:
 jobs:
   gerar-post:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permissão de escrita para o GITHUB_TOKEN
 
     steps:
       - name: Clonar repositório
@@ -28,13 +30,11 @@ jobs:
         run: npm run gerar
 
       - name: Commit e push do novo post
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+        # REMOVA A LINHA 'env: GH_PAT: ${{ secrets.GH_PAT }}'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add public/posts/post-dia.json data/posts.json
           git commit -m "🧠 Post automático do dia $(date +'%Y-%m-%d')" || echo "Nada para commitar"
-          git push https://x-access-token:${GH_PAT}@github.com/rafaelioppi/curiosidade-cientifica-dia.git HEAD:main
-         
-
+          # Mude o push para usar a autenticação padrão (GITHUB_TOKEN)
+          git push
