@@ -46,20 +46,32 @@ async function gerarPost(assunto = '') {
   // Data no horário de SP
   const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 
-  const post = { data: dataSP, conteudo, imagem };
+  const post = {
+    data: dataSP,
+    conteudo,
+    imagem,
+    timestamp: Date.now() // força alteração no JSON
+  };
 
-  // Caminho do arquivo histórico
-  const filePath = path.join(__dirname, '../data/posts.json');
-
+  // 📁 Salvar histórico
+  const historicoPath = path.join(__dirname, '../data/posts.json');
   try {
     let historico = [];
-    if (fs.existsSync(filePath)) {
-      historico = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    if (fs.existsSync(historicoPath)) {
+      historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
     }
     historico.push(post);
-    fs.writeFileSync(filePath, JSON.stringify(historico, null, 2));
+    fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
   } catch (err) {
-    console.error('❌ Erro ao salvar post no histórico:', err.message);
+    console.error('❌ Erro ao salvar no histórico:', err.message);
+  }
+
+  // 📁 Salvar post do dia
+  const postDiaPath = path.join(__dirname, '../public/posts/post-dia.json');
+  try {
+    fs.writeFileSync(postDiaPath, JSON.stringify(post, null, 2));
+  } catch (err) {
+    console.error('❌ Erro ao salvar post do dia:', err.message);
   }
 
   return post;
