@@ -1,75 +1,92 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* Container dos cards */
 #conteudo {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  padding: 1rem;
 }
 
-#conteudo .col-card {
-  flex: 0 0 48%;   /* ocupa 48% da linha */
-  max-width: 48%;  /* garante que não ultrapasse 48% */
+/* Coluna do card */
+.col-card {
+  flex: 0 0 48%;
+  max-width: 48%;
   display: flex;
-  justify-content: justify;  /* centraliza o card dentro da coluna */
+  justify-content: center;
 }
+
 /* Card */
 .card {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  padding: 1rem;           /* padding interno */
-  border-radius: 0.5rem;   /* bordas arredondadas */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra */
-  gap: 1rem;               /* espaço entre texto e imagem */
+  justify-content: space-between; /* imagem sempre embaixo */
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   background-color: #fff;
-  box-sizing: border-box;  /* garante que padding não quebre largura */
+  min-height: 480px; /* garante altura uniforme entre cards */
+}
+
+/* Wrapper interno opcional */
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* Texto */
 .card-text {
-  width: 100%;
-  height: 150px;           /* altura fixa ou ajuste como quiser */
-  margin: 0;               /* evita margens padrão */
-  text-align: justify;
-  overflow: hidden;        /* evita estourar do card */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex-grow: 1; /* ocupa espaço disponível */
 }
-
-  .card:hover {
-      transform: translateY(-5px);
-    }
 
 /* Imagem */
 .imagem-post {
   width: 100%;
-  height: 150px;           /* mesma altura do texto */
-  object-fit: cover;       /* não distorce */
+  height: 200px;
+  object-fit: cover;
   border-radius: 0.4rem;
+  display: block;
+  margin-top: auto; /* empurra imagem para base */
 }
 
-
-/* Responsividade — mobile: empilha */
+/* Responsividade — mobile */
 @media (max-width: 768px) {
-  #conteudo .col-card {
+  #conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-card {
     flex: 1 1 100%;
     max-width: 100%;
-    padding: 1rem;
+    padding: 0;
   }
 
   .card {
     width: 100%;
-    height: auto;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    overflow: hidden;
+    max-width: 100%;
+    min-height: auto;
   }
 
   .imagem-post {
-    height: 200px; /* altura mais adequada para mobile */
-  }
-
-  .card-text {
-    height: auto;
-    max-height: 200px;
-    overflow-y: auto;
+    height: 180px;
   }
 }
