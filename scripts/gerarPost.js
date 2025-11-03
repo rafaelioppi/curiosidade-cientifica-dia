@@ -18,8 +18,14 @@ async function gerarPost(assunto = '') {
         { params: { key: process.env.GEMINI_API_KEY } }
       );
 
-      const candidates = resposta.data.candidates;
-      if (candidates?.length > 0) return candidates[0].content.parts[0].text;
+      console.log("🔍 Resposta Gemini:", JSON.stringify(resposta.data, null, 2));
+
+      const candidates = resposta.data?.candidates;
+      const texto = candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (texto && typeof texto === 'string' && texto.trim().length > 0) {
+        return texto.trim();
+      }
     } catch (err) {
       console.error('❌ Erro ao gerar texto com Gemini:', err.response?.data?.error?.message || err.message);
     }
@@ -33,7 +39,7 @@ async function gerarPost(assunto = '') {
         params: { query: assunto || 'science', orientation: 'landscape' },
         headers: { Authorization: 'Client-ID ' + process.env.UNSPLASH_ACCESS_KEY }
       });
-      return res.data.urls.regular;
+      return res.data?.urls?.regular || '';
     } catch (err) {
       console.error('❌ Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
       return '';
