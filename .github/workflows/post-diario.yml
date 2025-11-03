@@ -36,3 +36,5 @@ jobs:
           git add public/posts/post-dia.json data/posts.json
           git commit -m "🧠 Post automático do dia $(date +'%Y-%m-%d')" || echo "Nada para commitar"
           git push https://x-access-token:${GH_PAT}@github.com/rafaelioppi/curiosidade-cientifica-dia.git HEAD:main
+         
+
