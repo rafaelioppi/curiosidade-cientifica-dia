@@ -23,19 +23,21 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Verificar secrets
+        run: |
+          echo "🔍 GEMINI_API_KEY está definida? -> ${{ secrets.GEMINI_API_KEY != '' }}"
+          echo "🔍 UNSPLASH_ACCESS_KEY está definida? -> ${{ secrets.UNSPLASH_ACCESS_KEY != '' }}"
+
       - name: Gerar post do dia
         run: npm run gerar
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
 
-
       - name: Commit e push do novo post
-        # REMOVA A LINHA 'env: GH_PAT: ${{ secrets.GH_PAT }}'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add public/posts/post-dia.json data/posts.json
           git commit -m "🧠 Post automático do dia $(date +'%Y-%m-%d')" || echo "Nada para commitar"
-          # Mude o push para usar a autenticação padrão (GITHUB_TOKEN)
           git push
