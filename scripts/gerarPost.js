@@ -50,7 +50,7 @@ async function gerarPost(assunto = '') {
     data: dataSP,
     conteudo,
     imagem,
-    timestamp: Date.now() // força alteração no JSON
+    timestamp: Date.now()
   };
 
   // 📁 Salvar histórico
@@ -75,6 +75,14 @@ async function gerarPost(assunto = '') {
   }
 
   return post;
+}
+
+// ✅ Executa automaticamente se chamado diretamente
+if (require.main === module) {
+  gerarPost().then(post => {
+    console.log("✅ Post gerado com sucesso:");
+    console.log(post);
+  });
 }
 
 module.exports = gerarPost;
