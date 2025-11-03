@@ -9,7 +9,7 @@ jobs:
   gerar-post:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permissão de escrita para o GITHUB_TOKEN
+      contents: write # Permissão de escrita para o GITHUB_TOKEN ou GH_PAT
 
     steps:
       - name: Clonar repositório
@@ -27,6 +27,7 @@ jobs:
         run: |
           echo "🔍 GEMINI_API_KEY está definida? -> ${{ secrets.GEMINI_API_KEY != '' }}"
           echo "🔍 UNSPLASH_ACCESS_KEY está definida? -> ${{ secrets.UNSPLASH_ACCESS_KEY != '' }}"
+          echo "🔍 GH_PAT está definido? -> ${{ secrets.GH_PAT != '' }}"
 
       - name: Gerar post do dia
         run: npm run gerar
@@ -35,9 +36,12 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
 
       - name: Commit e push do novo post
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
           git add public/posts/post-dia.json data/posts.json
           git commit -m "🧠 Post automático do dia $(date +'%Y-%m-%d')" || echo "Nada para commitar"
           git push
