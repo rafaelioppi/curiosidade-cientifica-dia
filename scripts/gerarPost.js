@@ -1,7 +1,5 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
+console.log("🔑 GEMINI_API_KEY está definida?", !!process.env.GEMINI_API_KEY);
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
