@@ -24,10 +24,11 @@ jobs:
         run: npm install
 
       - name: Gerar post do dia
+        run: npm run gerar
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: npm run gerar
+
 
       - name: Commit e push do novo post
         # REMOVA A LINHA 'env: GH_PAT: ${{ secrets.GH_PAT }}'
