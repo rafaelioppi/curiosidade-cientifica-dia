@@ -58,16 +58,16 @@ body, html {
 }
 
 /* Imagem */
-/* Imagem */
 .imagem-post {
   width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
+  height: 200px;
+  object-fit: contain; /* mostra a imagem inteira sem cortar */
+  background-color: #f0f0f0; /* fundo neutro para preencher espaços vazios */
   border-radius: 0.4rem;
   display: block;
-  margin-top: auto; /* empurra imagem para base */
 }
+
+
 
 
 /* Responsividade — mobile */
