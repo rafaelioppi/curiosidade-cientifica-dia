@@ -60,12 +60,13 @@ body, html {
 /* Imagem */
 .imagem-post {
   width: 100%;
-  height: 200px;
-  object-fit: contain; /* mostra a imagem inteira sem cortar */
-  background-color: #f0f0f0; /* fundo neutro para preencher espaços vazios */
+  height: 250px;
+  object-fit: contain; /* exibe a imagem inteira sem cortar */
+  background-color: #f0f0f0; /* fundo neutro para imagens menores */
   border-radius: 0.4rem;
   display: block;
 }
+
 
 
 
