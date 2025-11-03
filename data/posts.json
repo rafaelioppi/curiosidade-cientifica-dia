@@ -43,9 +43,7 @@
     "imagem": "https://images.unsplash.com/photo-1616529927764-173a543493ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxODg5NTR8&ixlib=rb-4.1.0&q=80&w=1080",
     "timestamp": 1762188969276
   },
-  
   {
-
     "data": "2025-11-03 14:26:56",
     "conteudo": "**Sabia que os tardígrados**, também conhecidos como \"ursos d'água\", são os seres mais resistentes do planeta? Eles podem sobreviver no vácuo do espaço, a temperaturas extremas (de -272°C a 150°C), radiação e até sem água por décadas!",
     "imagem": "https://images.unsplash.com/photo-1618245596888-2fa0c17d4cec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxOTA4MDF8&ixlib=rb-4.1.0&q=80&w=1080",
@@ -56,5 +54,11 @@
     "conteudo": "**Sabia que o Guaíba, cartão-postal de Porto Alegre, não é tecnicamente um rio, mas sim um lago deltaico?** Ele é formado pela confluência de vários rios, criando um ecossistema único antes de desaguar na Lagoa dos Patos.",
     "imagem": "https://images.unsplash.com/photo-1524671606045-f246c20595c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxOTA0NzV8&ixlib=rb-4.1.0&q=80&w=1080",
     "timestamp": 1762191045763
+  },
+  {
+    "data": "2025-11-03 14:59:12",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **Quando você olha para o céu noturno, a luz da maioria das estrelas que você vê viajou por tanto tempo que você está, na verdade, olhando para o passado delas!** (Algumas já nem existem mais!)\n2.  **Você tem mais bactérias vivendo dentro e sobre você do que células humanas no seu próprio corpo!**\n3.  **Apesar de parecerem sólidos, os átomos são quase 99.9% espaço vazio. Isso significa que você, tecnicamente, é quase todo espaço vazio!**\n4.  **O Sol é tão grande que mais de um milhão de planetas Terra caberiam dentro dele!**",
+    "imagem": "https://images.unsplash.com/photo-1614308456595-a59d48697ea8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxOTI3Mzl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762192753139
   }
 ]
