@@ -26,6 +26,11 @@ body, html {
   justify-content: center;
 }
 
+.col-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px rgba(0, 0, 0, 0.15);
+}
+
 /* Card */
 .card {
   display: flex;
@@ -68,9 +73,6 @@ body, html {
 }
 
 
-
-
-
 /* Responsividade — mobile */
 @media (max-width: 768px) {
   #conteudo {
@@ -82,6 +84,12 @@ body, html {
     flex: 1 1 100%;
     max-width: 100%;
     padding: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .col-card:active {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   }
 
   .card {
@@ -92,5 +100,7 @@ body, html {
 
   .imagem-post {
     height: 180px;
+    object-fit: cover;
+    width: 100%;
   }
 }
