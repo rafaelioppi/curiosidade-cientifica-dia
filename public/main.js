@@ -36,10 +36,10 @@ function renderizarPosts(posts) {
       wrapper.appendChild(dataEl);
     }
 
-    // Texto do post
+    // Texto do post (com quebras de linha preservadas)
     const texto = document.createElement('p');
     texto.className = 'card-text';
-    texto.textContent = post.conteudo;
+    texto.innerHTML = post.conteudo.replace(/\n/g, '<br>');
     wrapper.appendChild(texto);
 
     // Imagem, se houver

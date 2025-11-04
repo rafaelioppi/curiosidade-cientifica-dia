@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 console.log("🔑 GEMINI_API_KEY está definida?", !!process.env.GEMINI_API_KEY);
 const fs = require('fs');
@@ -26,7 +25,7 @@ async function gerarPost(assunto = '') {
       const texto = candidates?.[0]?.content?.parts?.[0]?.text;
 
       if (texto && typeof texto === 'string' && texto.trim().length > 0) {
-        return texto.trim();
+        return `${texto.trim()}\n\n🔬 Fonte: Gemini (Google AI)`;
       }
     } catch (err) {
       console.error('❌ Erro ao gerar texto com Gemini:', err.response?.data?.error?.message || err.message);
