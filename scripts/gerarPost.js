@@ -60,28 +60,21 @@ async function gerarPost(assunto = '') {
     timestamp: Date.now()
   };
 
-// 📁 Salvar histórico
-const historicoPath = path.join(__dirname, '../data/posts.json');
-try {
-  let historico = [];
-  if (fs.existsSync(historicoPath)) {
-    historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
+  // 📁 Salvar histórico
+  const historicoPath = path.join(__dirname, '../data/posts.json');
+  try {
+    let historico = [];
+    if (fs.existsSync(historicoPath)) {
+      historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
+    }
+    historico.push(post);
+    fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
+    console.log("📜 Histórico salvo com sucesso. Total de posts:", historico.length);
+  } catch (err) {
+    console.error('❌ Erro ao salvar no histórico:', err.message);
   }
-  historico.push(post);
-  fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
-} catch (err) {
-  console.error('❌ Erro ao salvar no histórico:', err.message);
-}
 
-// 📁 Salvar post do dia (agora na mesma pasta "data")
-const postDiaPath = path.join(__dirname, '../data/post-dia.json');
-try {
-  fs.writeFileSync(postDiaPath, JSON.stringify(post, null, 2));
-} catch (err) {
-  console.error('❌ Erro ao salvar post do dia:', err.message);
-}
-
-return post;
+  return post;
 }
 
 // ✅ Executa automaticamente se chamado diretamente
