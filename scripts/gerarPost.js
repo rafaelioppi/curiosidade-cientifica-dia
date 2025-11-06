@@ -1,5 +1,3 @@
-
-
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
@@ -43,42 +41,90 @@ async function buscarImagemUnsplash(assunto) {
   }
 }
 
-// 🧠 Lista de assuntos científicos
-const assuntos = [/* ... seus 120 assuntos ... */]; // mantido como está
-
 // 📁 Caminho do histórico
-const historicoDir = path.join(__dirname, 'data');
+const historicoDir = path.join(__dirname, '../data');
 const historicoPath = path.join(historicoDir, 'posts.json');
 
-// 🚀 Função principal
-(async () => {
-  if (!fs.existsSync(historicoDir)) {
-    fs.mkdirSync(historicoDir);
-  }
+// 🚀 Função principal para gerar um post
+async function gerarPost(assunto = '') {
+  const tema = assunto.trim() ? ` sobre ${assunto.trim()}` : '';
+  const prompt = `Crie uma curiosidade científica curta e interessante${tema}.`;
+  const conteudo = await gerarTextoComGemini(prompt);
+  const imagem = await buscarImagemUnsplash(assunto);
+  const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 
-  let historico = [];
-  if (fs.existsSync(historicoPath)) {
-    historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
-  }
+  const post = {
+    data: dataSP,
+    assunto,
+    conteudo,
+    imagem,
+    timestamp: Date.now()
+  };
 
-  for (const assunto of assuntos) {
-    console.log(`🔄 Gerando post sobre: ${assunto}`);
-    const prompt = `Crie uma curiosidade científica curta e interessante sobre ${assunto}.`;
-    const conteudo = await gerarTextoComGemini(prompt);
-    const imagem = await buscarImagemUnsplash(assunto);
-    const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+  try {
+    if (!fs.existsSync(historicoDir)) {
+      fs.mkdirSync(historicoDir);
+    }
 
-    historico.push({
-      data: dataSP,
-      assunto,
-      conteudo,
-      imagem,
-      timestamp: Date.now()
-    });
+    let historico = [];
+    if (fs.existsSync(historicoPath)) {
+      historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
+    }
 
-    // Salvar após cada post para evitar perda em caso de erro
+    historico.push(post);
     fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
+    console.log("📜 Histórico salvo com sucesso. Total de posts:", historico.length);
+  } catch (err) {
+    console.error('❌ Erro ao salvar no histórico:', err.message);
   }
 
-  console.log("✅ Todos os posts foram gerados e salvos. Total:", historico.length);
-})();
+  return post;
+}
+
+// ✅ Executa em lote se chamado diretamente
+const assuntos = [
+  "buracos negros", "inteligência artificial", "evolução humana", "física quântica", "neurociência",
+  "teoria das cordas", "energia escura", "matéria escura", "DNA", "RNA", "vacinas", "imunologia",
+  "cérebro", "memória", "sono", "sonhos", "gravidade", "relatividade", "tempo", "espaço",
+  "universo", "galáxias", "estrelas", "planetas", "exoplanetas", "vida extraterrestre",
+  "astrobiologia", "biotecnologia", "engenharia genética", "clonagem", "células-tronco",
+  "fotossíntese", "ecossistemas", "biodiversidade", "extinção", "mudanças climáticas",
+  "aquecimento global", "camada de ozônio", "oceano", "correntes marítimas", "vulcões",
+  "terremotos", "placas tectônicas", "meteorologia", "raios", "tornados", "furacões",
+  "energia solar", "energia eólica", "energia nuclear", "fusão nuclear", "fissão nuclear",
+  "partículas subatômicas", "aceleradores de partículas", "bóson de Higgs", "antimatéria",
+  "computação quântica", "robótica", "nanotecnologia", "materiais inteligentes", "óptica",
+  "laser", "termodinâmica", "entropia", "eletricidade", "magnetismo", "eletromagnetismo",
+  "ondas gravitacionais", "tecnologia espacial", "foguetes", "satélites", "GPS", "ISS",
+  "missões espaciais", "Marte", "Lua", "Júpiter", "Saturno", "Urano", "Netuno", "Plutão",
+  "cometas", "asteroides", "meteoritos", "big bang", "cosmologia", "tempo profundo",
+  "arqueologia", "antropologia", "linguística", "psicologia", "sociologia", "economia comportamental",
+  "matemática", "álgebra", "geometria", "cálculo", "estatística", "probabilidade", "teoria dos jogos",
+  "criptografia", "segurança digital", "internet", "redes neurais", "machine learning",
+  "deep learning", "visão computacional", "biometria", "engenharia elétrica", "engenharia civil",
+  "engenharia mecânica", "engenharia aeroespacial", "engenharia ambiental", "engenharia de materiais"
+];
+
+if (require.main === module) {
+  (async () => {
+    if (!fs.existsSync(historicoDir)) {
+      fs.mkdirSync(historicoDir);
+    }
+
+    let historico = [];
+    if (fs.existsSync(historicoPath)) {
+      historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
+    }
+
+    for (const assunto of assuntos) {
+      console.log(`🔄 Gerando post sobre: ${assunto}`);
+      const post = await gerarPost(assunto);
+      historico.push(post);
+      fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
+    }
+
+    console.log("✅ Todos os posts foram gerados e salvos. Total:", historico.length);
+  })();
+}
+
+module.exports = gerarPost;
