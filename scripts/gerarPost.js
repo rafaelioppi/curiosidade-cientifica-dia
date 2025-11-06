@@ -1,8 +1,17 @@
 require('dotenv').config();
-console.log("🔑 GEMINI_API_KEY está definida?", !!process.env.GEMINI_API_KEY);
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+
+// 🔍 Verificar variáveis de ambiente
+if (!process.env.GEMINI_API_KEY) {
+  console.error("❌ GEMINI_API_KEY não está definida.");
+  process.exit(1);
+}
+if (!process.env.UNSPLASH_ACCESS_KEY) {
+  console.error("❌ UNSPLASH_ACCESS_KEY não está definida.");
+  process.exit(1);
+}
 
 async function gerarPost(assunto = '') {
   const tema = assunto.trim() ? ` sobre ${assunto.trim()}` : '';
@@ -19,11 +28,7 @@ async function gerarPost(assunto = '') {
         { params: { key: process.env.GEMINI_API_KEY } }
       );
 
-      console.log("🔍 Resposta Gemini:", JSON.stringify(resposta.data, null, 2));
-
-      const candidates = resposta.data?.candidates;
-      const texto = candidates?.[0]?.content?.parts?.[0]?.text;
-
+      const texto = resposta.data?.candidates?.[0]?.content?.parts?.[0]?.text;
       if (texto && typeof texto === 'string' && texto.trim().length > 0) {
         return `${texto.trim()}\n\n🔬 Fonte: Gemini (Google AI)`;
       }
@@ -50,7 +55,7 @@ async function gerarPost(assunto = '') {
   // 🚀 Executa em paralelo
   [conteudo, imagem] = await Promise.all([gerarTextoComGemini(), buscarImagemUnsplash()]);
 
-  // Data no horário de SP
+  // 🕒 Data no horário de SP
   const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 
   const post = {
@@ -61,12 +66,19 @@ async function gerarPost(assunto = '') {
   };
 
   // 📁 Salvar histórico
-  const historicoPath = path.join(__dirname, '../data/posts.json');
+  const historicoDir = path.join(__dirname, '../data');
+  const historicoPath = path.join(historicoDir, 'posts.json');
+
   try {
+    if (!fs.existsSync(historicoDir)) {
+      fs.mkdirSync(historicoDir);
+    }
+
     let historico = [];
     if (fs.existsSync(historicoPath)) {
       historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
     }
+
     historico.push(post);
     fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
     console.log("📜 Histórico salvo com sucesso. Total de posts:", historico.length);
