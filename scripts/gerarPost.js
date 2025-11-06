@@ -4,97 +4,98 @@ const path = require('path');
 const axios = require('axios');
 
 // 🔍 Verificar variáveis de ambiente
-if (!process.env.GEMINI_API_KEY) {
-  console.error("❌ GEMINI_API_KEY não está definida.");
-  process.exit(1);
-}
-if (!process.env.UNSPLASH_ACCESS_KEY) {
-  console.error("❌ UNSPLASH_ACCESS_KEY não está definida.");
+if (!process.env.GEMINI_API_KEY || !process.env.UNSPLASH_ACCESS_KEY) {
+  console.error("❌ Variáveis de ambiente não definidas corretamente.");
   process.exit(1);
 }
 
-async function gerarPost(assunto = '') {
-  const tema = assunto.trim() ? ` sobre ${assunto.trim()}` : '';
-  const prompt = `Crie uma curiosidade científica curta e interessante${tema}.`;
-  let conteudo = 'Curiosidade não disponível.';
-  let imagem = '';
-
-  // 🔬 Gerar texto com Gemini
-  const gerarTextoComGemini = async () => {
-    try {
-      const resposta = await axios.post(
-        'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
-        { contents: [{ role: 'user', parts: [{ text: prompt }] }] },
-        { params: { key: process.env.GEMINI_API_KEY } }
-      );
-
-      const texto = resposta.data?.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (texto && typeof texto === 'string' && texto.trim().length > 0) {
-        return `${texto.trim()}\n\n🔬 Fonte: Gemini (Google AI)`;
-      }
-    } catch (err) {
-      console.error('❌ Erro ao gerar texto com Gemini:', err.response?.data?.error?.message || err.message);
-    }
-    return conteudo;
-  };
-
-  // 🖼️ Buscar imagem do Unsplash
-  const buscarImagemUnsplash = async () => {
-    try {
-      const res = await axios.get('https://api.unsplash.com/photos/random', {
-        params: { query: assunto || 'science', orientation: 'landscape' },
-        headers: { Authorization: 'Client-ID ' + process.env.UNSPLASH_ACCESS_KEY }
-      });
-      return res.data?.urls?.regular || '';
-    } catch (err) {
-      console.error('❌ Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
-      return '';
-    }
-  };
-
-  // 🚀 Executa em paralelo
-  [conteudo, imagem] = await Promise.all([gerarTextoComGemini(), buscarImagemUnsplash()]);
-
-  // 🕒 Data no horário de SP
-  const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
-
-  const post = {
-    data: dataSP,
-    conteudo,
-    imagem,
-    timestamp: Date.now()
-  };
-
-  // 📁 Salvar histórico
-  const historicoDir = path.join(__dirname, '../data');
-  const historicoPath = path.join(historicoDir, 'posts.json');
-
+// 🔬 Função para gerar curiosidade com Gemini
+async function gerarTextoComGemini(prompt) {
   try {
-    if (!fs.existsSync(historicoDir)) {
-      fs.mkdirSync(historicoDir);
+    const resposta = await axios.post(
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
+      { contents: [{ role: 'user', parts: [{ text: prompt }] }] },
+      { params: { key: process.env.GEMINI_API_KEY } }
+    );
+    const texto = resposta.data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (texto && typeof texto === 'string' && texto.trim().length > 0) {
+      return `${texto.trim()}\n\n🔬 Fonte: Gemini (Google AI)`;
     }
-
-    let historico = [];
-    if (fs.existsSync(historicoPath)) {
-      historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
-    }
-
-    historico.push(post);
-    fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
-    console.log("📜 Histórico salvo com sucesso. Total de posts:", historico.length);
   } catch (err) {
-    console.error('❌ Erro ao salvar no histórico:', err.message);
+    console.error('❌ Erro ao gerar texto com Gemini:', err.response?.data?.error?.message || err.message);
+  }
+  return 'Curiosidade não disponível.';
+}
+
+// 🖼️ Função para buscar imagem no Unsplash
+async function buscarImagemUnsplash(assunto) {
+  try {
+    const res = await axios.get('https://api.unsplash.com/photos/random', {
+      params: { query: assunto || 'science', orientation: 'landscape' },
+      headers: { Authorization: 'Client-ID ' + process.env.UNSPLASH_ACCESS_KEY }
+    });
+    return res.data?.urls?.regular || '';
+  } catch (err) {
+    console.error('❌ Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
+    return '';
+  }
+}
+
+// 🧠 Lista de 120 assuntos científicos
+const assuntos = [
+  "buracos negros", "inteligência artificial", "evolução humana", "física quântica", "neurociência",
+  "teoria das cordas", "energia escura", "matéria escura", "DNA", "RNA", "vacinas", "imunologia",
+  "cérebro", "memória", "sono", "sonhos", "gravidade", "relatividade", "tempo", "espaço",
+  "universo", "galáxias", "estrelas", "planetas", "exoplanetas", "vida extraterrestre",
+  "astrobiologia", "biotecnologia", "engenharia genética", "clonagem", "células-tronco",
+  "fotossíntese", "ecossistemas", "biodiversidade", "extinção", "mudanças climáticas",
+  "aquecimento global", "camada de ozônio", "oceano", "correntes marítimas", "vulcões",
+  "terremotos", "placas tectônicas", "meteorologia", "raios", "tornados", "furacões",
+  "energia solar", "energia eólica", "energia nuclear", "fusão nuclear", "fissão nuclear",
+  "partículas subatômicas", "aceleradores de partículas", "bóson de Higgs", "antimatéria",
+  "computação quântica", "robótica", "nanotecnologia", "materiais inteligentes", "óptica",
+  "laser", "termodinâmica", "entropia", "eletricidade", "magnetismo", "eletromagnetismo",
+  "ondas gravitacionais", "tecnologia espacial", "foguetes", "satélites", "GPS", "ISS",
+  "missões espaciais", "Marte", "Lua", "Júpiter", "Saturno", "Urano", "Netuno", "Plutão",
+  "cometas", "asteroides", "meteoritos", "big bang", "cosmologia", "tempo profundo",
+  "arqueologia", "antropologia", "linguística", "psicologia", "sociologia", "economia comportamental",
+  "matemática", "álgebra", "geometria", "cálculo", "estatística", "probabilidade", "teoria dos jogos",
+  "criptografia", "segurança digital", "internet", "redes neurais", "machine learning",
+  "deep learning", "visão computacional", "biometria", "engenharia elétrica", "engenharia civil",
+  "engenharia mecânica", "engenharia aeroespacial", "engenharia ambiental", "engenharia de materiais"
+];
+
+// 📁 Caminho do histórico
+const historicoDir = path.join(__dirname, 'data');
+const historicoPath = path.join(historicoDir, 'posts.json');
+
+// 🚀 Função principal
+(async () => {
+  if (!fs.existsSync(historicoDir)) {
+    fs.mkdirSync(historicoDir);
   }
 
-  return post;
-}
+  let historico = [];
+  if (fs.existsSync(historicoPath)) {
+    historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
+  }
 
-// ✅ Executa automaticamente se chamado diretamente
-if (require.main === module) {
-  gerarPost().then(post => {
-    console.log("✅ Post gerado com sucesso:");
-    console.log(post);
-  });
-}
+  for (const assunto of assuntos) {
+    console.log(`🔄 Gerando post sobre: ${assunto}`);
+    const prompt = `Crie uma curiosidade científica curta e interessante sobre ${assunto}.`;
+    const conteudo = await gerarTextoComGemini(prompt);
+    const imagem = await buscarImagemUnsplash(assunto);
+    const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 
-module.exports = gerarPost;
+    historico.push({
+      data: dataSP,
+      assunto,
+      conteudo,
+      imagem,
+      timestamp: Date.now()
+    });
+  }
+
+  fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
+  console.log("✅ Todos os posts foram gerados e salvos. Total:", historico.length);
+})();
