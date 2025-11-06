@@ -36,6 +36,16 @@ function renderizarPosts(posts) {
       wrapper.appendChild(dataEl);
     }
 
+    // ✅ Assunto, se disponível
+    if (post.assunto) {
+      const assuntoEl = document.createElement('p');
+      assuntoEl.className = 'card-assunto';
+      assuntoEl.textContent = `🧠 Assunto: ${post.assunto}`;
+      assuntoEl.style.fontWeight = 'bold';
+      assuntoEl.style.marginBottom = '0.5rem';
+      wrapper.appendChild(assuntoEl);
+    }
+
     // Texto do post (com quebras de linha preservadas)
     const texto = document.createElement('p');
     texto.className = 'card-text';
@@ -91,6 +101,11 @@ async function carregarCuriosidade() {
     const post = await res.json();
     todosOsPosts.unshift(post);
     renderizarPosts(todosOsPosts);
+
+    // ✅ Preencher campo com o assunto usado
+    if (post.assunto && campoAssunto) {
+      campoAssunto.value = post.assunto;
+    }
   } catch (err) {
     console.error('❌ Erro ao carregar curiosidade:', err);
   } finally {

@@ -64,11 +64,29 @@ app.get('/', (req, res) => {
 });
 
 // 🧠 Rota para gerar novo post com assunto
+const assuntosPadrao = [
+  "buracos negros", "inteligência artificial", "física quântica", "DNA", "vacinas",
+  "neurociência", "robótica", "energia solar", "células-tronco", "universo",
+  "fotossíntese", "engenharia genética", "partículas subatômicas", "tecnologia espacial",
+  "big bang", "matéria escura", "antimatéria", "computação quântica", "psicologia",
+  "biotecnologia", "astrobiologia", "gravidade", "relatividade", "missões espaciais",
+  "nanotecnologia", "biodiversidade", "engenharia aeroespacial", "visão computacional",
+  "criptografia", "redes neurais", "economia comportamental", "arqueologia"
+];
+
 app.post('/post', asyncHandler(async (req, res) => {
-  const { assunto } = req.body;
+  let assunto = req.body.assunto?.trim();
+
+  if (!assunto) {
+    const index = Math.floor(Math.random() * assuntosPadrao.length);
+    assunto = assuntosPadrao[index];
+    console.log(`🎲 Assunto aleatório selecionado: ${assunto}`);
+  }
+
   const novoPost = await gerarPost(assunto);
   res.json(novoPost);
 }));
+
 
 // 📜 Rota para retornar histórico
 app.get('/historico', (req, res) => {
