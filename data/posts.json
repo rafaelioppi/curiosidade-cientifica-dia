@@ -110,5 +110,803 @@
     "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n**Opção 1 (Espaço):**\n\"Sabia que a União Soviética enviou a primeira mulher ao espaço, Valentina Tereshkova, em 1963? Ela passou quase três dias em órbita, mais tempo do que todos os astronautas americanos *juntos* até aquele ponto!\"\n\n**Opção 2 (Engenharia/Pioneirismo Espacial):**\n\"O primeiro humano a fazer uma caminhada espacial foi o cosmonauta soviético Alexei Leonov em 1965. Sua roupa espacial inflou tanto no vácuo que ele teve que liberar ar, arriscando a vida, para conseguir reentrar na nave!\"\n\n**Opção 3 (Pseudociência e Impacto Social):**\n\"A União Soviética, sob Stalin, adotou oficialmente o 'Lysenkoismo', uma pseudociência agrícola que negava a genética moderna. Essa política erradicou cientistas e causou repetidas fomes, atrasando a pesquisa biológica soviética por décadas!\"\n\n🔬 Fonte: Gemini (Google AI)",
     "imagem": "https://images.unsplash.com/photo-1631359062410-02bb201adae8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI0NjAzNjd8&ixlib=rb-4.1.0&q=80&w=1080",
     "timestamp": 1762460366943
+  },
+  {
+    "data": "2025-11-07 06:26:57",
+    "assunto": "buracos negros",
+    "conteudo": "Sabia que a gravidade de um buraco negro é tão intensa que, se você caísse nele, seria esticado como um fio de espaguete — um processo real chamado \"espaguetificação\" — antes mesmo de atingir o seu centro?\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1735846516862-b3a89d79f084?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2MTd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507617374
+  },
+  {
+    "data": "2025-11-07 06:27:07",
+    "assunto": "inteligência artificial",
+    "conteudo": "Aqui está uma:\n\n\"Apesar de poder resolver problemas complexos e até criar arte, a Inteligência Artificial *não compreende* o mundo como nós. Ela apenas reconhece e processa padrões em quantidades massivas de dados!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507627744
+  },
+  {
+    "data": "2025-11-07 06:27:16",
+    "assunto": "evolução humana",
+    "conteudo": "Aqui está uma:\n\n\"Você sabia que a maioria das pessoas de ascendência não-africana carrega cerca de 1% a 4% de DNA Neanderthal? É um vestígio genético dos cruzamentos que nossos ancestrais tiveram com essa outra espécie humana, mostrando que a nossa árvore genealógica é bem mais... misturada do que se imaginava!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507636857
+  },
+  {
+    "data": "2025-11-07 06:27:25",
+    "assunto": "física quântica",
+    "conteudo": "Aqui está uma:\n\n\"Você sabia que, na física quântica, uma partícula pode estar em **múltiplos lugares ao mesmo tempo** ou ter várias características simultaneamente, como uma moeda que é cara E coroa enquanto gira no ar? Só quando a observamos é que ela 'decide' um único estado!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1656231925500-3c7330f52599?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2NDV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507645927
+  },
+  {
+    "data": "2025-11-07 06:27:34",
+    "assunto": "neurociência",
+    "conteudo": "Aqui está uma curiosidade científica curta e interessante sobre neurociência:\n\n---\n\n**Seu cérebro possui mais conexões sinápticas (bilhões e trilhões!) do que estrelas na Via Láctea!** Isso é o que permite sua incrível capacidade de processar informações, aprender e formar memórias complexas.\n\n---\n\n**Outra opção:**\n\n**Apesar de pesar apenas cerca de 2% do seu peso corporal, o cérebro consome incríveis 20% de toda a energia do seu corpo!** Ele é uma máquina super eficiente e faminta por glicose para manter todas as suas funções.\n\n---\n\n**Mais uma:**\n\n**Os sinais elétricos no seu cérebro podem viajar a velocidades de até 430 km/h!** É assim que você reage tão rapidamente ao mundo ao seu redor.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1672487914911-ceef7e144255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2NTR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507654744
+  },
+  {
+    "data": "2025-11-07 06:27:43",
+    "assunto": "teoria das cordas",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre a Teoria das Cordas:\n\n**Opção 1 (Foco nas Cordas Vibrantes):**\n\n> Sabia que, segundo a Teoria das Cordas, as partículas fundamentais que compõem absolutamente tudo no universo – desde a luz até você – não são pontos, mas sim minúsculas \"cordas\" de energia vibrando em diferentes padrões? É o tipo de vibração que define se essa \"corda\" é um elétron, um fóton ou qualquer outra partícula!\n\n**Opção 2 (Foco nas Dimensões Extras):**\n\n> Uma das ideias mais alucinantes da Teoria das Cordas é que o nosso universo pode ter muito mais dimensões do que as quatro que conhecemos (três espaciais e uma temporal)! Essas dimensões extras estariam \"enroladas\" de forma tão incrivelmente pequena que são indetectáveis para nós, existindo em uma escala subatômica!\n\n**Opção 3 (Mais concisa):**\n\n> Imagine que todas as partículas do universo não são pontos, mas minúsculas \"cordas\" vibrantes em 10 ou 11 dimensões extras, invisíveis para nós! A Teoria das Cordas busca unificar todas as forças da natureza com essa ideia.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1756940781530-42149559c922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507663921
+  },
+  {
+    "data": "2025-11-07 06:27:51",
+    "assunto": "energia escura",
+    "conteudo": "A **energia escura** compõe cerca de 68% do universo e é a força misteriosa que age como uma 'anti-gravidade' cósmica, fazendo o espaço se expandir em ritmo *acelerado*. É a maior parte do cosmos, mas *não fazemos ideia do que ela realmente é*!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1584968329412-cf2026fc7c3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2NzF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507671828
+  },
+  {
+    "data": "2025-11-07 06:28:02",
+    "assunto": "matéria escura",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **A matéria escura compõe cerca de 85% de toda a massa do universo, mas é completamente invisível! Não interage com a luz e só a detectamos pela sua poderosa influência gravitacional, que impede as galáxias de se despedaçarem.**\n2.  **Pense na matéria escura como a \"cola invisível\" do universo. Embora não possamos vê-la, é sua imensa gravidade que mantém as galáxias unidas e permite a formação de grandes estruturas cósmicas.**\n3.  **Sabia que a matéria escura não emite, reflete ou absorve luz? Ela é indetectável diretamente, mas sua existência é a maior prova de que o que vemos no universo é apenas uma fração de tudo o que realmente existe.**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1699513245849-4ed7208c0169?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2ODJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507682492
+  },
+  {
+    "data": "2025-11-07 06:28:09",
+    "assunto": "DNA",
+    "conteudo": "Aqui está uma:\n\n**Você sabia que o DNA presente em todas as células do seu corpo, se fosse esticado e alinhado, alcançaria o Sol e voltaria mais de 300 vezes?** É uma fita de informação incrível!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1581056771306-166fa643838c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2ODl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507689475
+  },
+  {
+    "data": "2025-11-07 06:28:18",
+    "assunto": "RNA",
+    "conteudo": "Aqui está uma curiosidade:\n\n**Sabia que nem todo material genético é DNA? Muitos vírus, como o da gripe, o HIV e o COVID-19, usam RNA como seu principal material genético! Essa característica os torna mais suscetíveis a mutações rápidas, dificultando o controle e o desenvolvimento de vacinas.**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1638025773292-1ef8c1ec8c5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc2OTh8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507698129
+  },
+  {
+    "data": "2025-11-07 06:28:27",
+    "assunto": "vacinas",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **Você sabia que as vacinas são como um \"treinamento de memória\" para o seu sistema imunológico?** Elas ensinam o corpo a reconhecer e combater vírus e bactérias muito mais rápido em uma futura infecção, sem que você precise adoecer para aprender!\n\n2.  **A varíola, uma das doenças mais mortais da história, foi completamente erradicada do planeta graças às vacinas!** É o único vírus que já eliminamos com sucesso.\n\n3.  **Você sabia que as vacinas de mRNA (como as da COVID-19) não contêm o vírus?** Elas entregam apenas uma \"receita\" para suas células construírem uma pequena proteína inofensiva do vírus, ensinando seu corpo a criar defesas poderosas sem nunca ter contato com o patógeno real!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1703518011449-d7b7bd32c2fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3MDd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507707594
+  },
+  {
+    "data": "2025-11-07 06:28:35",
+    "assunto": "imunologia",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que seu sistema imunológico tem uma memória tão boa que pode 'lembrar' um vírus ou bactéria por décadas, pronto para combatê-lo novamente?\"**\n2.  **\"Seu corpo está constantemente produzindo células cancerosas, mas o sistema imunológico age como um 'patrulheiro silencioso', identificando e destruindo a maioria delas antes que se tornem um tumor.\"**\n3.  **\"O sistema imunológico é capaz de produzir mais de 10 bilhões de tipos diferentes de anticorpos, cada um como uma 'chave' única para se ligar e neutralizar um 'invasor' específico!\"**\n4.  **\"Algumas células do seu sistema imunológico são como 'pac-men' microscópicos, engolindo e digerindo bactérias e vírus invasores inteiros!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1706647154150-899666e4ed9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3MTV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507715702
+  },
+  {
+    "data": "2025-11-07 06:28:43",
+    "assunto": "cérebro",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Embora processe todas as sensações de dor, o seu cérebro em si não possui receptores de dor e, portanto, não sente dor!\"**\n2.  **\"Seu cérebro, pesando apenas 2% do seu corpo, consome 20% de toda a energia e oxigênio que você usa. É uma máquina incrivelmente faminta e eficiente!\"**\n3.  **\"A atividade elétrica gerada pelo seu cérebro enquanto você está acordado é suficiente para acender uma pequena lâmpada!\"**\n4.  **\"A velocidade com que os neurônios podem enviar mensagens no seu cérebro pode ultrapassar os 400 km/h!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1559757175-5700dde675bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3MjN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507723869
+  },
+  {
+    "data": "2025-11-07 06:28:55",
+    "assunto": "memória",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n**Opção 1 (Sobre a maleabilidade da memória):**\n\"Você sabia que suas memórias não são gravações perfeitas do passado, mas sim reconstruções ativas? Cada vez que você se lembra de algo, seu cérebro pode preencher lacunas e até 'revisar' os detalhes, tornando-as maleáveis e suscetíveis à criação de 'memórias falsas' bem convincentes!\"\n\n**Opção 2 (Sobre o papel do sono):**\n\"Você sabia que, enquanto dormimos, nosso cérebro não 'descansa' das memórias? Pelo contrário, é durante o sono profundo que ele organiza, consolida e fortalece as informações aprendidas, decidindo o que vale a pena guardar a longo prazo!\"\n\n**Opção 3 (Sobre o esquecimento):**\n\"Você sabia que esquecer não é apenas um defeito da memória, mas uma função essencial? Seu cérebro se livra ativamente de informações irrelevantes para otimizar espaço e processamento, permitindo que você foque no que realmente importa!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1528569937393-ee892b976859?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3MzV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507735044
+  },
+  {
+    "data": "2025-11-07 06:29:03",
+    "assunto": "sono",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Curiosidade:** Enquanto você dorme, seu cérebro não desliga! Ele trabalha ativamente para limpar \"lixo\" metabólico acumulado durante o dia e organizar memórias, como um supercomputador em manutenção.\n\n2.  **Curiosidade:** Golfinhos e focas conseguem dormir com metade do cérebro de cada vez (sono uni-hemisférico)! Isso permite que fiquem alertas para predadores e continuem nadando ou nadando para respirar.\n\n3.  **Curiosidade:** Aquele \"solavanco\" que você sente às vezes ao adormecer, chamado de espasmo hípnico, é um mistério! Uma teoria sugere que seu cérebro, relaxando rápido demais, interpreta a sensação como uma queda e te dá um susto para ver se você está bem.\n\n4.  **Curiosidade:** Durante o sono REM, quando sonhamos mais vividamente, seu cérebro paralisa temporariamente seus músculos do corpo (menos os olhos e os que controlam a respiração)! Isso impede que você saia da cama encenando seus sonhos e se machuque.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1648503973094-f1eb21c4f5f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3NDN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507743631
+  },
+  {
+    "data": "2025-11-07 06:29:12",
+    "assunto": "sonhos",
+    "conteudo": "Aqui estão algumas opções:\n\n**Opção 1 (a mais popular e surpreendente):**\n\"Você sabia que o seu cérebro não consegue criar rostos novos nos sonhos? Todas as pessoas que você vê em seus sonhos são rostos que você já encontrou na vida real, mesmo que brevemente ou inconscientemente!\"\n\n**Opção 2 (sobre esquecimento):**\n\"Em apenas 10 minutos após acordar, cerca de 90% de um sonho é completamente esquecido. Nossos cérebros são especialistas em 'limpar' essa memória onírica rapidamente!\"\n\n**Opção 3 (sobre a duração):**\n\"Um sonho, por mais vívido e longo que pareça, geralmente dura apenas alguns segundos a, no máximo, 20-30 minutos, ocorrendo em ciclos durante a noite.\"\n\n**Opção 4 (sobre cegos):**\n\"Pessoas que nasceram cegas também sonham! Seus sonhos, porém, não contêm imagens visuais, mas são ricos em sensações como sons, toques, cheiros e emoções.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1496325823264-7cdf2ea4f0a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3NTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507752978
+  },
+  {
+    "data": "2025-11-07 06:29:19",
+    "assunto": "gravidade",
+    "conteudo": "Você sabia que a gravidade não é exatamente uma força que \"puxa\" os objetos, mas sim uma **distorção (ou curvatura) do próprio espaço-tempo** causada por objetos com massa?\n\nÉ como se objetos pesados, como planetas, \"amassassem\" a trama do universo ao redor deles, e é essa \"depressão\" que faz outros objetos \"cair\" em sua direção, seguindo a curvatura, e não um puxão direto!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507759283
+  },
+  {
+    "data": "2025-11-07 06:29:28",
+    "assunto": "relatividade",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre a relatividade:\n\n1.  **\"Você sabia que seu GPS só funciona graças à relatividade de Einstein? Sem correções baseadas em como o tempo e o espaço se comportam de forma diferente para os satélites em alta velocidade, ele erraria por quilômetros todos os dias!\"**\n\n2.  **\"O tempo não é o mesmo para todos! Segundo a relatividade de Einstein, quem viaja em alta velocidade envelhece um pouco mais devagar do que quem fica parado. É um efeito comprovado!\"**\n\n3.  **\"A famosa fórmula E=mc² da relatividade não é só teoria: ela mostra que uma minúscula quantidade de massa pode ser convertida numa quantidade gigantesca de energia. É o princípio por trás do Sol e das bombas atômicas!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507768190
+  },
+  {
+    "data": "2025-11-07 06:29:36",
+    "assunto": "tempo",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Se você viajasse em velocidades próximas à luz, o tempo para você passaria *mais devagar* do que para alguém na Terra. É o fenômeno da 'dilatação do tempo', previsto por Einstein!\"**\n2.  **\"Tempo e espaço não são separados; eles são partes de uma única teia chamada 'espaçotempo', que pode ser curvada pela massa e energia de objetos como planetas e buracos negros.\"**\n3.  **\"Por que o tempo só avança para o futuro e nunca retrocede? A resposta está na 'flecha do tempo', impulsionada pela entropia — a tendência irreversível do universo em direção à desordem crescente!\"**\n4.  **\"Alguns físicos teorizam que o tempo pode não ser uma dimensão fundamental do universo, mas uma propriedade 'emergente' ou até mesmo uma *ilusão* da nossa percepção!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1739066483935-b7ab1dbbbdaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3NzZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507776402
+  },
+  {
+    "data": "2025-11-07 06:29:44",
+    "assunto": "espaço",
+    "conteudo": "Sabia que no espaço não existe \"meia-estação\"? Na luz solar direta, a temperatura pode ser escaldante (acima de 120°C), mas na sombra, ela despenca para um frio extremo (abaixo de -150°C) em segundos! Tudo pela ausência de atmosfera para conduzir e reter calor.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1759252577998-47d8249bd711?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3ODR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507784379
+  },
+  {
+    "data": "2025-11-07 06:29:53",
+    "assunto": "universo",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que 95% do universo é invisível e desconhecido?** Ele é composto por matéria e energia escura, entidades misteriosas que moldam a nossa realidade cósmica, mas que não conseguimos observar diretamente!\"\n\n2.  **\"O universo não só está se expandindo, mas essa expansão está acelerando!** É como se o próprio espaço estivesse esticando cada vez mais rápido, empurrado por uma energia misteriosa que ainda não compreendemos.\"\n\n3.  **\"Existem mais estrelas no universo observável do que grãos de areia em todas as praias da Terra.** E isso é apenas a parte que podemos ver!\"\n\n4.  **\"Você sabia que o universo não tem um centro?** Qualquer ponto do universo pode ser considerado o \"centro\", pois tudo se expande para longe de tudo o mais!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1450849608880-6f787542c88a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc3OTN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507793274
+  },
+  {
+    "data": "2025-11-07 06:30:02",
+    "assunto": "galáxias",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Existem mais galáxias no universo observável do que grãos de areia em todas as praias da Terra!\"**\n2.  **\"Mesmo quando galáxias inteiras colidem, suas estrelas raramente se chocam! O espaço entre elas é tão vasto que elas se atravessam, reorganizando a estrutura galáctica.\"**\n3.  **\"Mais de 80% da massa de uma galáxia é composta por \"matéria escura\", uma substância invisível e misteriosa que não interage com a luz, mas cuja gravidade a mantém unida!\"**\n4.  **\"Nossa própria galáxia, a Via Láctea, está em rota de colisão com a vizinha Galáxia de Andrômeda! Elas se encontrarão em cerca de 4,5 bilhões de anos, fundindo-se em uma nova e gigantesca galáxia.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1706562017807-1ace3fbcb8df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4MDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507802782
+  },
+  {
+    "data": "2025-11-07 06:30:12",
+    "assunto": "estrelas",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n**Opção 1 (Sobre a origem):**\n\"Sabia que quase todos os átomos do seu corpo, exceto o hidrogênio, foram forjados no interior de estrelas que explodiram há bilhões de anos? Somos, literalmente, poeira estelar!\"\n\n**Opção 2 (Sobre o tempo):**\n\"Quando você olha para uma estrela no céu noturno, você está, na verdade, olhando para o passado! A luz dessas estrelas levou anos, séculos ou até milênios para chegar aos seus olhos, então você as vê como eram há muito tempo.\"\n\n**Opção 3 (Sobre o tamanho):**\n\"Algumas estrelas são tão incrivelmente gigantescas que, se estivessem no lugar do nosso Sol, engoliriam não só a Terra, mas até a órbita de planetas como Júpiter ou Saturno!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1705690421631-c9964523d2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4MTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507812555
+  },
+  {
+    "data": "2025-11-07 06:30:21",
+    "assunto": "planetas",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Em Vênus, um dia dura mais tempo do que um ano!** (Sua rotação é super lenta, enquanto a órbita ao redor do Sol é mais rápida).\n2.  **Saturno é tão leve que, se houvesse uma banheira grande o suficiente, ele flutuaria na água!** (Sua densidade é menor que a da água).\n3.  **Em planetas gigantes gasosos como Netuno e Urano, as condições de pressão e temperatura são tão extremas que pode chover diamantes!**\n4.  **A Grande Mancha Vermelha de Júpiter é uma tempestade gigante, maior que a Terra, que rage há pelo menos 350 anos!**\n5.  **Vênus é mais quente que Mercúrio, mesmo estando mais distante do Sol, por causa do seu intenso efeito estufa que aprisiona o calor.**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1712511714087-85159abceb67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4MjF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507821513
+  },
+  {
+    "data": "2025-11-07 06:30:31",
+    "assunto": "exoplanetas",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  Você sabia que existem exoplanetas tão próximos de suas estrelas que têm oceanos de lava e, em alguns casos, pode literalmente chover ferro fundido na atmosfera?\n\n2.  Imagine um exoplaneta onde um lado está em eterno dia escaldante e o outro em eterna noite congelante! Isso acontece em planetas \"travados gravitacionalmente\" com suas estrelas.\n\n3.  Existem \"planetas errantes\" que não orbitam nenhuma estrela! Eles vagam pela galáxia na escuridão e no frio extremos, sozinhos e sem um \"sol\" para guiá-los.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1654737178110-977669b9bcdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4MzF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507831904
+  },
+  {
+    "data": "2025-11-07 06:30:41",
+    "assunto": "vida extraterrestre",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que apenas na nossa galáxia, a Via Láctea, pode haver bilhões de planetas na 'zona habitável' – a distância ideal de sua estrela para ter água líquida? Isso sugere que a vida pode ser mais comum do que imaginamos!\"**\n\n2.  **\"Apesar de bilhões de planetas potencialmente habitáveis na nossa galáxia, o universo parece estranhamente silencioso. Se a vida extraterrestre é tão provável, 'onde estão todos eles?' é uma das maiores perguntas da ciência, conhecida como o Paradoxo de Fermi.\"**\n\n3.  **\"Se na Terra encontramos vida em condições extremas – de vulcões a águas congeladas –, imagine a diversidade que poderia florescer em mundos alienígenas com atmosferas e químicos totalmente diferentes. A vida pode ser muito mais adaptável do que imaginamos!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1694240347537-aebd12f85446?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4NDF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507841761
+  },
+  {
+    "data": "2025-11-07 06:30:49",
+    "assunto": "astrobiologia",
+    "conteudo": "A astrobiologia nos revela que a vida na Terra prospera em ambientes *extremamente* inóspitos — de vulcões submarinos a gelo polar. Se aqui a vida é tão resiliente, imagine as formas surpreendentes que poderíamos encontrar em mundos aparentemente sem vida, como luas geladas de Júpiter ou exoplanetas distantes!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1711560708511-36b48acad6bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4NDl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507849437
+  },
+  {
+    "data": "2025-11-07 06:30:59",
+    "assunto": "biotecnologia",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Opção 1 (Foco em edição genética):**\n    \"Sabia que a biotecnologia nos deu uma 'tesoura molecular' (como a CRISPR) capaz de editar o DNA com precisão para, quem sabe, no futuro, curar doenças genéticas e até combater vírus?\"\n\n2.  **Opção 2 (Foco na presença no dia a dia):**\n    \"Curiosidade: A biotecnologia está mais presente na sua vida do que você imagina! Ela está na fermentação do pão e da cerveja, nas enzimas que deixam seu jeans desbotado e nas vacinas que te protegem.\"\n\n3.  **Opção 3 (Foco em aplicações e futuro):**\n    \"A biotecnologia permite 'reprogramar' células para criar medicamentos personalizados, produzir alimentos mais nutritivos e até desenvolver materiais sustentáveis, imitando e aprimorando a própria natureza.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1631824680987-8bae525fc696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4NTl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507859384
+  },
+  {
+    "data": "2025-11-07 06:31:08",
+    "assunto": "engenharia genética",
+    "conteudo": "Aqui está uma:\n\n\"A engenharia genética nos dá o poder de 'editar' o próprio código da vida! Já imaginou corrigir falhas genéticas para curar doenças ou fazer uma planta brilhar no escuro, tudo manipulando seu DNA?\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1692607038292-cb94a95a9719?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4Njh8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507868863
+  },
+  {
+    "data": "2025-11-07 06:31:17",
+    "assunto": "clonagem",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre clonagem:\n\n1.  **\"Você sabia que, apesar de terem o mesmo DNA, clones não são cópias exatas? Fatores como o ambiente, as experiências e até o desenvolvimento no útero garantem que cada um tenha suas próprias características únicas e personalidades distintas!\"** (Desmistifica a ideia de \"cópia perfeita\")\n\n2.  **\"Uma curiosidade sobre a clonagem é que um clone pode 'nascer velho'! O material genético de um doador adulto já tem uma idade biológica, o que significa que o clone pode iniciar a vida com células que já passaram por parte do processo de envelhecimento do original.\"** (Foca na questão do envelhecimento celular)\n\n3.  **\"A clonagem é a tecnologia que pode, um dia, trazer de volta espécies extintas! Cientistas já trabalham na 'desextinção' de animais como o mamute-lanoso, usando DNA preservado.\"** (Aborda o potencial futuro e um aspecto fascinante)\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507877810
+  },
+  {
+    "data": "2025-11-07 06:31:27",
+    "assunto": "células-tronco",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre células-tronco:\n\n**Opção 1 (Focada no Potencial):**\n\"Você sabia que as células-tronco são as 'células mestras' do nosso corpo? Elas têm o superpoder de se transformar em *quase qualquer* outro tipo de célula (nervosa, muscular, óssea, etc.), agindo como um \"kit de reparo\" natural e oferecendo uma esperança gigante para a medicina regenerativa!\"\n\n**Opção 2 (Focada na Reprogramação - iPSCs):**\n\"Uma curiosidade fascinante é que os cientistas conseguiram 'reprogramar' células comuns (como as da sua pele!) para que voltem a ser células-tronco pluripotentes. É como dar um 'reset' nelas, abrindo caminhos incríveis para criar novos tecidos e tratar doenças!\"\n\n**Opção 3 (Mais Poética/Curta):**\n\"As células-tronco são as 'folhas em branco' do nosso corpo, com a incrível capacidade de se transformar em quase qualquer tipo de célula, prontas para reparar e regenerar o que for preciso!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1706647155885-82fa6eeb78d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4ODd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507887336
+  },
+  {
+    "data": "2025-11-07 06:31:36",
+    "assunto": "fotossíntese",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que as plantas são verdes *não* porque usam a luz verde para a fotossíntese, mas sim porque a *refletem*? Elas preferem absorver as cores azul e vermelha para produzir sua energia!\"**\n\n2.  **\"A fotossíntese é a \"fábrica\" mais importante do planeta: anualmente, ela transforma bilhões de toneladas de dióxido de carbono em oxigênio e alimento, sendo a base de quase toda a vida na Terra!\"**\n\n3.  **\"Curioso: A fotossíntese não só nos dá o oxigênio para respirar, mas também é a única porta de entrada de energia para quase toda a vida na Terra. Sem ela, nosso planeta seria um lugar sem comida ou ar para a vasta maioria dos seres vivos!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1745508833979-4e5601c5f405?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc4OTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507896438
+  },
+  {
+    "data": "2025-11-07 06:31:43",
+    "assunto": "ecossistemas",
+    "conteudo": "Claro, aqui está uma:\n\n**\"Você sabia que um punhado de solo pode conter mais microrganismos do que pessoas na Terra? Eles são os *engenheiros invisíveis* que reciclam nutrientes e mantêm a vida em ecossistemas inteiros!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507903375
+  },
+  {
+    "data": "2025-11-07 06:31:52",
+    "assunto": "biodiversidade",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre biodiversidade:\n\n1.  **\"Sabia que conhecemos apenas cerca de 10% de todas as espécies na Terra? Isso significa que *milhões* de formas de vida, de microrganismos a animais e plantas complexos, ainda aguardam ser descobertas e estudadas!\"** (Foca no desconhecido)\n\n2.  **\"Você sabia que a biodiversidade é tão interconectada que a ausência de uma única espécie pode gerar um efeito cascata em todo um ecossistema? Por exemplo, a diminuição das abelhas ameaça cerca de um terço dos alimentos que consumimos, que dependem da polinização!\"** (Foca na interconexão e impacto)\n\n3.  **\"A biodiversidade é a 'farmácia' e o 'supermercado' natural do planeta! Mais de 50% dos medicamentos que usamos hoje têm sua origem em plantas, animais ou microrganismos, muitos ainda não totalmente explorados.\"** (Foca no valor e potencial)\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1694538398758-b4ae17cf125d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5MTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507912965
+  },
+  {
+    "data": "2025-11-07 06:32:02",
+    "assunto": "extinção",
+    "conteudo": "Aqui estão algumas opções de curiosidades científicas curtas e interessantes sobre extinção:\n\n1.  **\"Você sabia que mais de 99% de todas as espécies que já viveram na Terra estão extintas? A extinção é um processo natural, mas a taxa atual está alarmantemente acelerada pela ação humana!\"**\n    *(Destaca a naturalidade do processo vs. a aceleração atual.)*\n\n2.  **\"A taxa atual de extinção de espécies é até 1.000 vezes maior do que a taxa natural de 'extinção de fundo', um número impulsionado principalmente pela destruição de habitats e pelas mudanças climáticas.\"**\n    *(Foca na velocidade assustadora da extinção atual.)*\n\n3.  **\"Estima-se que milhões de espécies desapareçam antes mesmo de serem descobertas e catalogadas pela ciência, o que significa que perdemos biodiversidade – e talvez curas ou inovações – sem nunca as conhecer!\"**\n    *(Aponta para o que estamos perdendo sem sequer saber.)*\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507922636
+  },
+  {
+    "data": "2025-11-07 06:32:11",
+    "assunto": "mudanças climáticas",
+    "conteudo": "Aqui está uma curiosidade:\n\n**\"Sabia que cerca de metade do aumento global do nível do mar não vem apenas do derretimento do gelo, mas da expansão da própria água do oceano conforme ela esquenta?\"**\n\n---\n**Por que é interessante?**\nA maioria das pessoas associa o aumento do nível do mar diretamente ao derretimento de geleiras e calotas polares. A ideia de que a água quente ocupa mais espaço (dilatação térmica) é um fator crucial, mas menos intuitivo e, portanto, surpreendente para muitos.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1624324378932-68e20f332982?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5MzF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507931868
+  },
+  {
+    "data": "2025-11-07 06:32:20",
+    "assunto": "aquecimento global",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **\"Você sabia que os oceanos absorvem mais de 90% do excesso de calor gerado pelo aquecimento global? Sem esse gigantesco \"amortecedor\" natural, a temperatura da superfície terrestre já seria muito mais alta!\"**\n2.  **\"A concentração atual de dióxido de carbono (CO2) na atmosfera é a mais alta em pelo menos 800.000 anos, e está aumentando a uma velocidade sem precedentes na história geológica!\"**\n3.  **\"Além de aquecer o planeta, o excesso de CO2 na atmosfera também está acidificando os oceanos em uma velocidade alarmante, ameaçando corais, moluscos e a base da vida marinha.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1653525749885-46a75af1eb5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5NDB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507940889
+  },
+  {
+    "data": "2025-11-07 06:32:28",
+    "assunto": "camada de ozônio",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n**Opção 1 (Sobre a espessura):**\n> Sabia que, apesar de ser nossa principal protetora contra a radiação UV, a camada de ozônio é incrivelmente fina? Se todo o ozônio fosse comprimido à pressão do nível do mar, ele formaria uma camada com apenas cerca de **3 milímetros** de espessura!\n\n**Opção 2 (Sobre a recuperação):**\n> Você sabia que o famoso \"buraco\" na camada de ozônio — que é, na verdade, um afinamento significativo — está lentamente se recuperando? Graças a um acordo global (Protocolo de Montreal), cientistas preveem que ela voltará aos níveis de 1980 até meados do século, um grande sucesso ambiental!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1539459715562-ba1f34e6e035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5NDh8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507948587
+  },
+  {
+    "data": "2025-11-07 06:32:37",
+    "assunto": "oceano",
+    "conteudo": "Claro, aqui estão algumas opções:\n\n1.  **\"Sabia que mais de 80% do oceano permanece inexplorado? Temos mapas mais detalhados da superfície da Lua e de Marte do que do nosso próprio fundo do mar!\"**\n2.  **\"Você sabia que a maioria das criaturas que vivem nas profundezas do oceano são bioluminescentes? Elas produzem a própria luz, transformando o abismo escuro em um espetáculo luminoso!\"**\n3.  **\"No ponto mais profundo do oceano, a Fossa das Marianas, a pressão é tão grande que equivale a ter 50 aviões jumbo sobre você!\"**\n\nEscolha a que mais gostar!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1590258525587-fe0166186fda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507957931
+  },
+  {
+    "data": "2025-11-07 06:32:47",
+    "assunto": "correntes marítimas",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que as correntes marítimas formam um 'tapete rolante' gigante que distribui calor por todo o planeta, influenciando drasticamente o clima de regiões distantes? Sem elas, nosso mundo seria irreconhecível!\"**\n\n2.  **\"A Corrente do Golfo, uma das mais poderosas correntes marítimas, transporta mais água por segundo do que *todos* os rios do mundo combinados, sendo vital para o clima ameno da Europa!\"**\n\n3.  **\"Você sabia que, além das correntes superficiais, existem 'rios' gigantes e invisíveis no fundo do oceano, movidos por diferenças de temperatura e salinidade? Eles formam uma circulação global que pode levar mais de mil anos para completar uma volta!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1708851148146-783a5b7da55d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5Njd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507967504
+  },
+  {
+    "data": "2025-11-07 06:32:57",
+    "assunto": "vulcões",
+    "conteudo": "**Curiosidade:**\n\nVocê sabia que algumas erupções vulcânicas são tão poderosas que podem **trazer diamantes** à superfície? O magma, ao subir de profundidades extremas da Terra, arranca essas gemas preciosas do manto e as carrega consigo em sua jornada explosiva!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1760875170519-b4bdabaa88bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5Nzd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507977142
+  },
+  {
+    "data": "2025-11-07 06:33:06",
+    "assunto": "terremotos",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que acontecem **milhões** de terremotos no planeta Terra todos os anos? A maioria é tão fraca que só pode ser detectada por sismógrafos!\"**\n2.  **\"Um terremoto de grande magnitude pode liberar uma energia equivalente a **milhares de bombas atômicas**, concentrada em segundos ou minutos!\"**\n3.  **\"Animais como cães e gatos podem, por vezes, sentir um terremoto segundos antes dos humanos, possivelmente devido à percepção de ondas sísmicas sutis (ondas P) que chegam mais cedo.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1509717887673-42ee4d6b1718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDc5ODZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762507986625
+  },
+  {
+    "data": "2025-11-07 06:33:14",
+    "assunto": "placas tectônicas",
+    "conteudo": "Aqui está uma:\n\n\"Você sabia que as placas tectônicas se movem na mesma velocidade que o crescimento das suas unhas? Apesar de parecerem paradas, esse movimento de poucos centímetros por ano é o que causa terremotos, vulcões e a formação de montanhas gigantes!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762507994640
+  },
+  {
+    "data": "2025-11-07 06:33:20",
+    "assunto": "meteorologia",
+    "conteudo": "Você sabia que uma única descarga de um raio pode ser até **cinco vezes mais quente que a superfície do Sol**, atingindo temperaturas superiores a 30.000°C em uma fração de segundo? É por isso que o ar explode e cria o trovão!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1583562334499-cbf0b14e9b72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwMDB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508000396
+  },
+  {
+    "data": "2025-11-07 06:33:29",
+    "assunto": "raios",
+    "conteudo": "Aqui está uma curiosidade:\n\n**Você sabia que a temperatura de um raio pode ser até 5 vezes mais quente que a superfície do Sol?**\n\nEle atinge cerca de 30.000 °C em um instante, transformando o ar ao redor em plasma e criando a onda de choque sonora que chamamos de trovão!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1750268746235-1657249daa37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwMDl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508009748
+  },
+  {
+    "data": "2025-11-07 06:33:39",
+    "assunto": "tornados",
+    "conteudo": "Aqui está uma:\n\n**Curiosidade:** A pressão no centro de um tornado pode ser tão baixa que, ao passar sobre uma casa, o ar de alta pressão *dentro* da casa pode empurrar as paredes para fora, fazendo-a parecer explodir!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1695605347212-691681ad01f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwMTl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508019199
+  },
+  {
+    "data": "2025-11-07 06:33:48",
+    "assunto": "furacões",
+    "conteudo": "Aqui está uma:\n\n**Um furacão maduro pode liberar a cada segundo uma energia equivalente à explosão de 10 bombas atômicas de Hiroshima!** Essa energia vem do calor latente liberado pela condensação da água do oceano.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1713293712535-64294839fc91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwMjh8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508028612
+  },
+  {
+    "data": "2025-11-07 06:33:53",
+    "assunto": "energia solar",
+    "conteudo": "Você sabia que a quantidade de energia solar que atinge a Terra em apenas **uma hora** é suficiente para abastecer o mundo inteiro por **um ano**?\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1589275776107-e193042128bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwMzN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508033792
+  },
+  {
+    "data": "2025-11-07 06:34:02",
+    "assunto": "energia eólica",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **\"Você sabia que a ponta das pás de uma turbina eólica moderna pode atingir velocidades de até 320 km/h, mais rápido que um guepardo?\"**\n2.  **\"A energia eólica não é uma invenção recente! Moinhos de vento para moer grãos e bombear água já eram usados há milhares de anos, muito antes de gerarem eletricidade.\"**\n3.  **\"Uma única turbina eólica moderna de grande porte pode gerar eletricidade suficiente para abastecer milhares de residências por ano, transformando o simples vento em poder para uma cidade!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1626674095787-942cc30809cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwNDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508042171
+  },
+  {
+    "data": "2025-11-07 06:34:09",
+    "assunto": "energia nuclear",
+    "conteudo": "**Curiosidade:** Você sabia que um único pellet de urânio, do tamanho de uma borracha de lápis, pode gerar a mesma quantidade de energia que uma tonelada de carvão ou três barris de petróleo? É a prova de como a massa pode se converter em uma colossal quantidade de energia!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "https://images.unsplash.com/photo-1664966856584-8cdee21d01fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjMyNDF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDgwNDl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "timestamp": 1762508049292
+  },
+  {
+    "data": "2025-11-07 06:34:17",
+    "assunto": "fusão nuclear",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que a fusão nuclear – a energia que faz o Sol brilhar – exige que na Terra alcancemos temperaturas *mais quentes que o coração do Sol* para funcionar?\"**\n    *(Destaca a intensidade necessária e a conexão solar.)*\n\n2.  **\"Curiosidade: A fusão nuclear, a energia das estrelas, poderia ser alimentada com o hidrogênio de apenas um copo de água do mar, gerando eletricidade para uma vida inteira com mínima produção de resíduos!\"**\n    *(Foca na abundância do combustível e no potencial limpo.)*\n\n3.  **\"A fusão nuclear é a arte de 'colar' dois átomos leves (como hidrogênio) com tanto calor e pressão que eles se transformam em um átomo mais pesado, liberando uma energia colossal – a promessa de um 'sol em miniatura' na Terra!\"**\n    *(Explica o processo de forma mais poética e o potencial.)*\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508057713
+  },
+  {
+    "data": "2025-11-07 06:34:26",
+    "assunto": "fissão nuclear",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre fissão nuclear:\n\n**Opção 1 (Foco na Energia):**\n\"Você sabia que um único átomo de urânio, ao sofrer fissão nuclear, libera **milhões de vezes mais energia** do que a queima de uma molécula de explosivo como o TNT? É por isso que ela é tão potente!\"\n\n**Opção 2 (Foco na Conversão Massa-Energia):**\n\"Na fissão nuclear, uma pequena fração da massa do átomo fissionado simplesmente *desaparece* – ela se transforma em uma quantidade colossal de energia, comprovando na prática a famosa equação $E=mc^2$ de Einstein!\"\n\n**Opção 3 (Foco na Reação em Cadeia):**\n\"Curiosidade: Na fissão nuclear, cada átomo que se parte libera não só uma enorme quantidade de energia, mas também *nêutrons* que podem atingir outros átomos e causar novas fissões, criando uma **reação em cadeia** que pode ser controlada (em usinas) ou explosiva (em armas nucleares)!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508066019
+  },
+  {
+    "data": "2025-11-07 06:34:34",
+    "assunto": "partículas subatômicas",
+    "conteudo": "Aqui estão algumas opções, escolha a que mais gostar:\n\n**Opção 1 (Sobre Superposição):**\n\"Você sabia que uma partícula subatômica pode existir em múltiplos estados (como estar em dois lugares ao mesmo tempo) *até* ser observada? É como se o ato de olhar a forçasse a 'escolher' uma realidade!\"\n\n**Opção 2 (Sobre Efeito Túnel Quântico):**\n\"Partículas subatômicas podem 'teletransportar-se' através de barreiras sólidas, mesmo sem ter energia para isso! É o bizarro 'efeito túnel' quântico, que permite que o Sol brilhe e seu smartphone funcione.\"\n\n**Opção 3 (Sobre Massa e Vazio):**\n\"Seu corpo é 99.99999% espaço vazio. E a maior parte da sua massa? Ela não vem das partículas em si, mas da energia que as mantém unidas! Você é mais 'energia' compactada do que 'matéria sólida'!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508074888
+  },
+  {
+    "data": "2025-11-07 06:34:46",
+    "assunto": "aceleradores de partículas",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"No Grande Colisor de Hádrons (LHC), partículas colidem a uma energia tão intensa que recriam as condições do Universo apenas um milionésimo de segundo após o Big Bang, revelando segredos sobre como tudo começou!\"**\n2.  \"Para colidir feixes de partículas subatômicas que viajam a 99,9999991% da velocidade da luz, aceleradores como o LHC exigem uma precisão equivalente a acertar dois fios de cabelo disparados de lados opostos do planeta!\"\n3.  \"Aceleradores de partículas são, na verdade, máquinas do tempo em miniatura: eles recriam as condições do universo primitivo para nos ajudar a entender do que somos feitos e como o cosmos evoluiu.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508086223
+  },
+  {
+    "data": "2025-11-07 06:34:56",
+    "assunto": "bóson de Higgs",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n**Opção 1 (Foco na função):**\n\"O bóson de Higgs é a partícula fundamental que confere massa a outras partículas. Sem ele e o seu campo associado, elétrons e quarks não teriam peso, e o universo como o conhecemos – com estrelas, planetas e até você – simplesmente não existiria!\"\n\n**Opção 2 (Foco na descoberta e importância):**\n\"O bóson de Higgs foi a peça final do quebra-cabeça do Modelo Padrão da física de partículas! Descoberto em 2012, ele finalmente confirmou como as partículas adquirem massa, explicando por que existe matéria e estrutura no universo.\"\n\n**Opção 3 (Mais concisa):**\n\"Imagine um campo invisível por todo o universo que 'agarra' as partículas, dando-lhes massa. O bóson de Higgs é a partícula associada a esse campo, e sem ele, não haveria peso nem galáxias!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508096635
+  },
+  {
+    "data": "2025-11-07 06:35:05",
+    "assunto": "antimatéria",
+    "conteudo": "**Curiosidade sobre Antimatéria:**\n\nCada partícula de matéria tem uma \"irmã gêmea\" de antimatéria com a mesma massa, mas carga elétrica oposta. Por exemplo, o **antipróton** tem a mesma massa que um próton, mas uma carga negativa! Se eles se encontram, ambos desaparecem em uma explosão de energia pura.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508105558
+  },
+  {
+    "data": "2025-11-07 06:35:12",
+    "assunto": "computação quântica",
+    "conteudo": "Aqui está uma:\n\n\"Enquanto seu computador armazena informação como 0 ou 1, um computador quântico usa 'qubits' que podem ser 0, 1, ou **ambos ao mesmo tempo**! Graças a um fenômeno chamado superposição, ele consegue explorar milhões de possibilidades de cálculo *simultaneamente*, como se testasse todos os caminhos em múltiplos universos paralelos para encontrar a solução de problemas complexos de forma incrivelmente mais rápida.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508112436
+  },
+  {
+    "data": "2025-11-07 06:35:22",
+    "assunto": "robótica",
+    "conteudo": "Aqui está uma:\n\n**Você sabia que uma das tarefas mais difíceis para um robô não é levantar toneladas ou realizar cirurgias complexas, mas sim pegar um objeto pequeno e delicado do chão, como uma chave ou uma moeda?**\n\nIsso exige uma combinação de visão, destreza e percepção tátil que, para humanos, é quase automática, mas para a robótica, ainda é um desafio enorme e foco de muita pesquisa!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508122504
+  },
+  {
+    "data": "2025-11-07 06:35:31",
+    "assunto": "nanotecnologia",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que, na nanoescala, materiais como o ouro podem ser vermelhos e a prata transparente? É que suas propriedades mudam de forma surpreendente quando reduzidos a átomos e moléculas!\"**\n2.  **\"Um fio de cabelo humano tem cerca de 100.000 nanômetros de largura! A nanotecnologia trabalha com um mundo onde cada 'pedaço' é invisível, mas pode revolucionar tudo, da medicina à eletrônica.\"**\n3.  **\"A nanotecnologia permite manipular a matéria no nível de átomos e moléculas, criando materiais com 'superpoderes' invisíveis – como tecidos que se limpam sozinhos ou medicamentos que agem com precisão cirúrgica.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508131182
+  },
+  {
+    "data": "2025-11-07 06:35:39",
+    "assunto": "materiais inteligentes",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Sabia que existem materiais tão \"inteligentes\" que podem mudar de forma, cor, condutividade ou até se reparar sozinhos, reagindo apenas ao calor, à luz ou à eletricidade? Eles são a matéria do futuro, adaptando-se sem parar!**\n\n2.  **O que aconteceria se um material pudesse \"sentir\" o ambiente e, em resposta, mudar de cor, forma, rigidez ou até se consertar sozinho? Isso não é ficção, são os materiais inteligentes!**\n\n3.  **Imagine um material que \"sente\" o ambiente e, em resposta, muda de cor, forma ou até se autoconserta, sem precisar de ninguém para controlá-lo! Essa é a mágica por trás dos materiais inteligentes.**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508139761
+  },
+  {
+    "data": "2025-11-07 06:35:48",
+    "assunto": "óptica",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre óptica:\n\n1.  **A cor que você vê em um objeto não é a cor *dele*, mas a cor da luz que ele *reflete* para os seus olhos.** Ele absorve todas as outras!\n2.  **Embora a luz viaje a quase 300.000 km/s no vácuo, cientistas conseguiram *pará-la completamente* por um breve período em materiais super-resfriados!**\n3.  **Sua retina capta as imagens de cabeça para baixo e invertidas, mas é seu cérebro que, instantaneamente, as \"vira\" para que você as veja corretamente!**\n4.  **Do vasto espectro eletromagnético (rádio, micro-ondas, infravermelho, raios-X...), nossos olhos só conseguem ver uma minúscula \"janela\" de luz visível!**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508148496
+  },
+  {
+    "data": "2025-11-07 06:35:57",
+    "assunto": "laser",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **Curiosidade:** Lasers são tão incrivelmente precisos que cientistas os usam para medir a distância exata da Terra até a Lua com precisão de centímetros, refletindo um feixe em espelhos deixados lá por astronautas!\n\n2.  **Curiosidade:** Um único feixe de laser pode ser poderoso o suficiente para cortar chapas de aço e, ao mesmo tempo, delicado o bastante para realizar cirurgias oculares microscópicas!\n\n3.  **Curiosidade:** O que chamamos de \"laser\" é uma luz tão focada e pura que viaja em linha reta por quilômetros sem se espalhar, algo que nenhuma outra fonte de luz comum consegue!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508157910
+  },
+  {
+    "data": "2025-11-07 06:36:07",
+    "assunto": "termodinâmica",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que é impossível atingir o 'zero absoluto' (-273,15°C), onde todo movimento atômico cessaria? A Terceira Lei da Termodinâmica garante que sempre haverá um mínimo de energia, por menor que seja!\"**\n2.  **\"A Segunda Lei da Termodinâmica explica por que seu quarto bagunça sozinho e por que você nunca consegue 'desmisturar' o café com leite: o universo sempre tende à desordem (entropia)!\"**\n3.  **\"Por que o café quente esfria, mas nunca esquenta sozinho no frio? A termodinâmica diz que o calor sempre flui do mais quente para o mais frio, nunca o contrário!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508167148
+  },
+  {
+    "data": "2025-11-07 06:36:16",
+    "assunto": "entropia",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre entropia:\n\n1.  **\"Sabe por que é impossível 'descozinhar' um ovo ou voltar no tempo? É a entropia! Ela é a 'flecha do tempo', uma lei fundamental que explica a tendência natural do universo à desordem e à irreversibilidade.\"**\n2.  **\"A entropia não é apenas sobre a bagunça do seu quarto; ela é a medida da desordem e da energia dissipada do universo, ditando que ele sempre caminha para estados de maior aleatoriedade.\"**\n3.  **\"Você sabia que, embora a vida crie ordem em nossos corpos, ela o faz aumentando a entropia do ambiente ao redor? Para diminuir a desordem localmente, a vida precisa aumentar a desordem geral do universo!\"**\n4.  **\"A entropia é a razão pela qual uma xícara de café quente esfria e o gelo derrete: o universo prefere que a energia esteja espalhada e a matéria desorganizada, um estado de maior 'aleatoriedade'.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508176284
+  },
+  {
+    "data": "2025-11-07 06:36:24",
+    "assunto": "eletricidade",
+    "conteudo": "Aqui estão algumas opções de curiosidades científicas sobre eletricidade:\n\n1.  **\"Sabia que a eletricidade em seus fios viaja quase à velocidade da luz, mas os elétrons *individualmente* que a transportam se movem a passos de caracol? É a *onda de energia* que é rápida!\"**\n    *(Destaca a diferença entre a velocidade do sinal e a velocidade das partículas.)*\n\n2.  **\"Um único raio pode ser cinco vezes mais quente que a superfície do Sol (atingindo 30.000°C) e conter energia suficiente para acender 100 milhões de lâmpadas por um instante!\"**\n    *(Foca na escala e poder da eletricidade natural.)*\n\n3.  **\"Nem toda eletricidade vem de tomadas! Alguns animais, como a enguia-elétrica, geram seus próprios choques poderosos (até 600 volts) para caçar e se defender.\"**\n    *(Explora a bioeletricidade de forma surpreendente.)*\n\nEscolha a que mais gostar!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508184151
+  },
+  {
+    "data": "2025-11-07 06:36:33",
+    "assunto": "magnetismo",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que, por mais que você corte um ímã ao meio, você nunca conseguirá isolar apenas um polo norte ou um polo sul? Cada pedaço sempre criará um novo par de polos!\"**\n\n2.  **\"Pássaros migratórios e tartarugas marinhas possuem um 'sexto sentido' magnético! Eles conseguem sentir o campo magnético da Terra e o usam como um GPS natural para navegar em suas longas viagens.\"**\n\n3.  **\"O magnetismo não é apenas sobre ímãs de geladeira! Você sabia que a eletricidade pode *criar* magnetismo (e vice-versa), sendo a base de tudo, desde motores elétricos a computadores?\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508193356
+  },
+  {
+    "data": "2025-11-07 06:36:42",
+    "assunto": "eletromagnetismo",
+    "conteudo": "Você sabia que a **luz** que nos permite ver, as ondas de rádio do seu celular, as micro-ondas do forno e até os raios-X usados em hospitais são todos, na verdade, o **mesmo fenômeno**?\n\nSão apenas diferentes manifestações de ondas eletromagnéticas – campos elétricos e magnéticos que \"dançam\" um com o outro, propagando-se pelo espaço! A única diferença entre elas é o seu comprimento de onda.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508202384
+  },
+  {
+    "data": "2025-11-07 06:36:51",
+    "assunto": "ondas gravitacionais",
+    "conteudo": "Que tal esta:\n\n**Sabia que podemos \"ouvir\" o universo?**\n\nOndas gravitacionais são como \"ecos\" no tecido do espaço-tempo, permitindo-nos \"escutar\" a colisão de buracos negros e estrelas de nêutrons. Elas são a única forma de 'ver' (ouvir) esses eventos cataclísmicos que a luz jamais revelaria diretamente!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508211512
+  },
+  {
+    "data": "2025-11-07 06:37:01",
+    "assunto": "tecnologia espacial",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que a Estação Espacial Internacional (ISS) viaja a mais de 27.000 km/h? É tão rápido que ela completa uma órbita na Terra a cada 90 minutos, resultando em 16 nasceres e pores do sol por dia!\"**\n\n2.  **\"Curiosidade: Devido ao atraso na comunicação (que pode levar minutos ou horas), rovers como o Perseverance em Marte são programados para tomar muitas decisões de forma autônoma, usando inteligência artificial para navegar e identificar alvos científicos!\"**\n\n3.  **\"A maior parte do peso de um foguete na decolagem (cerca de 90%) é apenas combustível! A engenharia espacial é uma luta constante contra a gravidade para levar uma pequena carga útil ao espaço.\"**\n\n4.  **\"Sondas que exploram o sistema solar exterior, onde a luz solar é fraca demais, usam tecnologia de 'baterias nucleares' chamadas Geradores Termoelétricos de Radioisótopos (RTGs), que convertem o calor do decaimento radioativo em eletricidade para funcionar por décadas!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508221182
+  },
+  {
+    "data": "2025-11-07 06:37:11",
+    "assunto": "foguetes",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Para um foguete entrar em órbita, o mais difícil não é apenas subir, mas atingir uma velocidade lateral tão extrema (mais de 28.000 km/h!) que ele está constantemente 'caindo' *ao redor* da Terra, sem nunca atingir o solo. É como mirar e *errar* a Terra para sempre!\"**\n\n2.  **\"Foguetes espaciais são construídos para *jogar fora* partes inteiras (os estágios) à medida que sobem! Isso os torna progressivamente mais leves, permitindo que a parte restante acelere ainda mais com menos combustível, uma estratégia essencial para alcançar o espaço.\"**\n\n3.  **\"Ao contrário do que muitos pensam, os foguetes funcionam *melhor* no vácuo do espaço! Como eles carregam seu próprio comburente (oxigênio), não precisam de ar para impulsionar e não sofrem resistência para acelerar.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508231781
+  },
+  {
+    "data": "2025-11-07 06:37:18",
+    "assunto": "satélites",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n**Opção 1 (Sobre velocidade e órbita):**\n\"Sabia que os satélites não estão 'flutuando' no espaço, mas sim caindo *constantemente* em volta da Terra a milhares de quilômetros por hora? É essa velocidade que os impede de atingir o solo!\"\n\n**Opção 2 (Sobre visibilidade):**\n\"Curiosidade: À noite, aquelas 'estrelas' que se movem de forma constante e silenciosa no céu podem não ser aviões, mas sim satélites artificiais refletindo a luz do Sol!\"\n\n**Opção 3 (Sobre GPS):**\n\"Você sabia que para o seu GPS funcionar com precisão, ele precisa se conectar simultaneamente a *pelo menos quatro* satélites diferentes que orbitam a Terra?\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508238462
+  },
+  {
+    "data": "2025-11-07 06:37:26",
+    "assunto": "GPS",
+    "conteudo": "**Você sabia que o GPS só é preciso graças à Teoria da Relatividade de Einstein?**\n\nDevido à sua velocidade e à menor gravidade no espaço, o tempo passa *ligeiramente diferente* para os relógios nos satélites. Sem essa correção diária, seu GPS acumularia erros de quilômetros por dia, tornando-o completamente inútil!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508246245
+  },
+  {
+    "data": "2025-11-07 06:37:33",
+    "assunto": "ISS",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que os astronautas na ISS presenciam cerca de 16 nasceres e 16 pores do Sol a cada 24 horas? Isso porque a estação orbita a Terra a impressionantes 28.000 km/h!\"**\n\n2.  **\"Sabia que os astronautas na ISS não estão 'sem gravidade', mas sim em queda livre constante ao redor da Terra? É por isso que eles flutuam, mesmo sentindo cerca de 90% da gravidade terrestre!\"**\n\n3.  **\"Sabia que, para economizar recursos, os astronautas na ISS bebem água que é 100% reciclada, incluindo a sua própria urina e suor? Um sistema de filtragem avançadíssimo torna-a mais pura que a maioria da água que bebemos na Terra!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508253787
+  },
+  {
+    "data": "2025-11-07 06:37:43",
+    "assunto": "missões espaciais",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que os astronautas na Estação Espacial Internacional (ISS) testemunham cerca de 16 nasceres e 16 pores do sol a cada 24 horas? Isso ocorre porque a ISS orbita a Terra a uma velocidade de cerca de 28.000 km/h!\"**\n\n2.  **\"Você sabia que a comunicação com rovers em Marte tem um atraso de até 22 minutos em cada sentido? Isso significa que engenheiros na Terra só sabem se um comando funcionou quase uma hora depois de enviá-lo!\"**\n\n3.  **\"Você sabia que os astronautas podem crescer até 5 cm no espaço? Sem a gravidade puxando, sua coluna vertebral se alonga!\"**\n\n4.  **\"Você sabia que a sonda Voyager 1, lançada em 1977, é o objeto feito pelo homem mais distante da Terra, a mais de 24 bilhões de quilômetros, e ainda está enviando dados sobre o espaço interestelar?\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508263408
+  },
+  {
+    "data": "2025-11-07 06:37:53",
+    "assunto": "Marte",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **O Gigante Adormecido:** Sabia que o Monte Olimpo em Marte é o maior vulcão do Sistema Solar, com 22 km de altura – quase **TRÊS vezes** o Monte Everest! Ele é tão largo que cobriria a área da França.\n\n2.  **O Passado Azul:** Apesar de ser um deserto gelado hoje, Marte já foi um planeta \"azul\"! Evidências sugerem que ele abrigou oceanos e rios de água líquida bilhões de anos atrás.\n\n3.  **O Dia Familiar:** Um dia marciano (chamado \"sol\") dura 24 horas e 37 minutos, surpreendentemente parecido com um dia na Terra!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508273409
+  },
+  {
+    "data": "2025-11-07 06:38:03",
+    "assunto": "Lua",
+    "conteudo": "Aqui estão algumas opções de curiosidades científicas curtas e interessantes sobre a Lua:\n\n1.  **A Lua está se afastando!** A cada ano, ela se afasta da Terra cerca de 3,8 centímetros, um pouco mais rápido do que o crescimento das suas unhas.\n2.  **Sempre a mesma face:** Por que vemos sempre a mesma face da Lua? Ela está \"travada\" gravitacionalmente, levando o mesmo tempo para girar em torno de si que para orbitar a Terra, um fenômeno chamado rotação síncrona.\n3.  **Todos os planetas cabem no meio!** Se você pudesse alinhar todos os outros sete planetas do nosso sistema solar (Mercúrio, Vênus, Marte, Júpiter, Saturno, Urano e Netuno), eles caberiam perfeitamente no espaço entre a Terra e a Lua!\n4.  **A nossa grande estabilizadora:** Sem a Lua, o eixo de rotação da Terra oscilaria drasticamente, resultando em mudanças climáticas caóticas e imprevisíveis ao longo da história do planeta.\n5.  **A Lua tem gelo!** Apesar de ser um deserto cósmico, cientistas confirmaram a presença de água congelada em crateras permanentemente sombreadas nos polos lunares, um recurso valioso para futuras missões.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508283361
+  },
+  {
+    "data": "2025-11-07 06:38:10",
+    "assunto": "Júpiter",
+    "conteudo": "Sabia que a Grande Mancha Vermelha de Júpiter é uma tempestade gigante, maior que a Terra, que já dura há mais de 350 anos?\n\n---\n\n**Outra opção:**\n\nVocê sabia que Júpiter é considerado uma \"estrela falhada\"? Se ele tivesse umas 80 vezes mais massa, sua gravidade teria sido forte o suficiente para iniciar a fusão nuclear e se tornar uma estrela!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508290985
+  },
+  {
+    "data": "2025-11-07 06:38:17",
+    "assunto": "Saturno",
+    "conteudo": "**Curiosidade:** Saturno é o único planeta do nosso sistema solar que é menos denso que a água! Se houvesse um oceano gigante o suficiente, ele flutuaria nele.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508297209
+  },
+  {
+    "data": "2025-11-07 06:38:23",
+    "assunto": "Urano",
+    "conteudo": "Você sabia que Urano é o único planeta que \"rola\" pelo espaço? Sua inclinação axial de quase 98 graus o faz girar deitado, como se tivesse levado um empurrão cósmico gigante no passado distante!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508303298
+  },
+  {
+    "data": "2025-11-07 06:38:32",
+    "assunto": "Netuno",
+    "conteudo": "Aqui estão algumas opções:\n\n**Opção 1 (Ventos):**\n\"Apesar de ser um gigante de gelo distante e o planeta mais frio, Netuno é o planeta mais ventoso do Sistema Solar, com tempestades que atingem velocidades supersônicas de até 2.400 km/h – mais rápido que o som!\"\n\n**Opção 2 (Ano):**\n\"Em Netuno, um 'ano' dura incríveis 165 anos terrestres! Isso significa que, desde sua descoberta em 1846, Netuno só completou sua primeira órbita completa ao redor do Sol em 2011.\"\n\n**Opção 3 (Descoberta):**\n\"Netuno é o único planeta do nosso Sistema Solar que foi descoberto não pela observação direta com telescópios, mas puramente por cálculos matemáticos, ao analisar as perturbações na órbita de Urano!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508312426
+  },
+  {
+    "data": "2025-11-07 06:38:42",
+    "assunto": "Plutão",
+    "conteudo": "Aqui está uma:\n\n\"Sabia que, apesar de ser um planeta anão, Plutão tem um \"coração\" gigante e gelado na sua superfície, uma vasta planície de nitrogénio congelado que é tão grande quanto a França?\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508322854
+  },
+  {
+    "data": "2025-11-07 06:38:52",
+    "assunto": "cometas",
+    "conteudo": "Aqui está uma:\n\n\"**Você sabia que a cauda de um cometa sempre aponta *para longe* do Sol, não importa para onde o cometa esteja viajando? É o vento solar e a luz que a 'empurram' para fora!**\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508332386
+  },
+  {
+    "data": "2025-11-07 06:39:01",
+    "assunto": "asteroides",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Você sabia que alguns asteroides têm suas próprias \"mini-luas\"?** Sim, cerca de 15% deles são sistemas binários, onde dois asteroides orbitam um ao outro no espaço!\n\n2.  **Asteroides são como cápsulas do tempo cósmicas!** Eles são restos rochosos da formação do nosso sistema solar, guardando segredos de 4,5 bilhões de anos atrás.\n\n3.  **Você sabia que alguns asteroides contêm mais metais preciosos (como ouro, platina) do que já foi minerado na história da Terra?** Isso os torna futuros \"cofres\" espaciais para a humanidade!\n\n4.  **Nem todo asteroide é uma rocha seca!** Muitos contêm gelo de água e moléculas orgânicas, podendo ter sido os \"carteiros cósmicos\" que entregaram a água e os blocos de construção da vida para a Terra primitiva.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508341754
+  },
+  {
+    "data": "2025-11-07 06:39:09",
+    "assunto": "meteoritos",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que muitos meteoritos são mais antigos que a própria Terra? Eles são cápsulas do tempo cósmicas que guardam segredos da formação do nosso Sistema Solar!\"**\n2.  **\"Alguns meteoritos contêm moléculas orgânicas complexas, os 'blocos de construção da vida', sugerindo que esses elementos essenciais podem ter chegado à Terra primordial vindos do espaço!\"**\n3.  **\"Um meteorito é a única amostra que temos para tocar um pedaço de um asteroide, da Lua ou até de Marte, sem nunca sair da Terra. Uma verdadeira 'rocha espacial' em suas mãos!\"**\n4.  **\"A 'estrela cadente' que você vê é um *meteoro* queimando na atmosfera. Se um pedaço dele sobreviver e cair no chão, *aí sim* vira um *meteorito* – uma rocha espacial que fez uma longa jornada até nós!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508349334
+  },
+  {
+    "data": "2025-11-07 06:39:16",
+    "assunto": "big bang",
+    "conteudo": "Sabia que o Big Bang deixou um \"eco\" que permeia todo o universo? É a **luz mais antiga** que podemos detectar, a Radiação Cósmica de Fundo em Micro-ondas (CMB), que nos mostra como era o cosmos quando tinha apenas cerca de 380.000 anos de idade!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508356143
+  },
+  {
+    "data": "2025-11-07 06:39:25",
+    "assunto": "cosmologia",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre cosmologia:\n\n**Opção 1 (Matéria e Energia Escura):**\n> Sabia que cerca de 95% do universo é feito de **Matéria Escura** e **Energia Escura**? Elas são invisíveis, misteriosas e a maior parte do cosmos! Não as podemos ver nem detectar diretamente, mas sabemos que estão lá por sua influência gravitacional e por acelerar a expansão do universo.\n\n**Opção 2 (Luz do Passado):**\n> Quando olhamos para as galáxias mais distantes, estamos, na verdade, olhando para o **passado**! A luz delas levou bilhões de anos para chegar até nós, revelando o universo como ele era, não como é. É uma verdadeira máquina do tempo cósmica!\n\n**Opção 3 (Radiação Cósmica de Fundo):**\n> Existe um \"eco\" do Big Bang vindo de todas as direções do espaço! É a **Radiação Cósmica de Fundo em Micro-ondas (CMB)**, a primeira luz que pôde viajar livremente pelo universo, cerca de 380 mil anos após sua origem. É como uma fotografia do universo bebê!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508365042
+  },
+  {
+    "data": "2025-11-07 06:39:35",
+    "assunto": "tempo profundo",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre tempo profundo:\n\n1.  **\"Se toda a história de 4.5 bilhões de anos da Terra fosse comprimida em um único dia de 24 horas, os humanos só surgiriam nos últimos *segundos* do último minuto!\"**\n\n2.  **\"Você sabia que o T-Rex (que viveu há cerca de 66 milhões de anos) está mais próximo de nós no tempo do que do Stegosaurus (que viveu há cerca de 150 milhões de anos)? Essa é a vasta e surpreendente escala do tempo profundo!\"**\n\n3.  **\"No tempo profundo, continentes inteiros se movem à velocidade com que suas unhas crescem, mas, ao longo de milhões de anos, redesenham completamente o mapa do planeta.\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508375349
+  },
+  {
+    "data": "2025-11-07 06:39:43",
+    "assunto": "arqueologia",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Arqueólogos não buscam apenas ouro ou múmias!** Eles conseguem \"ler\" a vida cotidiana de civilizações antigas através de pistas invisíveis a olho nu, como grãos de pólen, sementes carbonizadas e até a composição química do solo, revelando dietas, doenças e paisagens de milhares de anos atrás.\n\n2.  **Você sabia que a arqueologia não acontece só em desertos ou ruínas visíveis?** Cidades inteiras podem estar preservadas sob camadas de gelo, lama de pântanos ou até no fundo do mar, como cápsulas do tempo esperando para serem descobertas!\n\n3.  **Arqueólogos podem descobrir até mesmo o som do passado!** Analisando a estrutura de instrumentos antigos, a acústica de templos e a iconografia de rituais, eles conseguem imaginar como eram a música e os sons de civilizações que viveram há milhares de anos.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508383652
+  },
+  {
+    "data": "2025-11-07 06:39:52",
+    "assunto": "antropologia",
+    "conteudo": "Aqui está uma:\n\n**Você sabia que em algumas culturas as pessoas não usam \"esquerda\" ou \"direita\", mas sim \"norte\", \"sul\", \"leste\" e \"oeste\" para se orientar? Isso faz com que seus falantes tenham um senso de direção incrivelmente apurado desde a infância, moldado pela sua língua e ambiente!**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508392545
+  },
+  {
+    "data": "2025-11-07 06:40:02",
+    "assunto": "linguística",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **A gramática inata dos bebês:** \"Bebês, mesmo antes de falarem, já distinguem e compreendem nuances gramaticais complexas de sua língua nativa, demonstrando uma capacidade inata surpreendente para a estrutura da linguagem, sem nunca terem tido uma aula formal!\"\n2.  **Línguas em extinção:** \"A cada duas semanas, uma língua morre em algum lugar do mundo! Das mais de 7.000 línguas existentes hoje, cerca de 40% estão em risco de desaparecer, levando consigo culturas únicas e formas de ver o mundo.\"\n3.  **Línguas de Sinais são línguas de verdade:** \"Ao contrário do que muitos pensam, as Línguas de Sinais (como a LIBRAS) não são pantomimas ou \"gestos universais\". Elas possuem gramática própria, estrutura complexa e vocabulário tão rico quanto qualquer língua falada, sendo processadas pelas mesmas áreas cerebrais!\"\n4.  **O superpoder dos bilíngues:** \"Ser bilíngue não significa apenas falar dois idiomas; estudos mostram que essa habilidade pode atrasar o aparecimento de demência em até cinco anos e melhora a capacidade de multitarefa e foco!\"\n5.  **A \"gramática universal\" no nosso cérebro:** \"Por mais diferentes que sejam, todas as 7.000+ línguas do mundo compartilham 'universais linguísticos' – princípios gramaticais profundos e comuns na mente humana, sugerindo uma arquitetura inata para a linguagem em nosso cérebro.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508402300
+  },
+  {
+    "data": "2025-11-07 06:40:09",
+    "assunto": "psicologia",
+    "conteudo": "**Sabia que...** no seus sonhos, você só consegue ver os rostos de pessoas que seu cérebro já encontrou na vida real? Mesmo que você não se lembre delas conscientemente, sua mente não cria rostos do zero!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508409529
+  },
+  {
+    "data": "2025-11-07 06:40:18",
+    "assunto": "sociologia",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **Você sabia que a maioria das regras que governam nossas interações diárias — da fila do café ao comportamento no transporte público — não está escrita, mas sua violação pode gerar sanções sociais reais, como olhares de desaprovação ou ostracismo? É o poder invisível das normas sociais moldando nosso mundo!**\n\n2.  **Você sabia que conceitos como \"adolescência\" ou \"aposentadoria\" não são fases biológicas universais, mas sim construções sociais que variam imensamente entre culturas e épocas? A sociologia nos mostra como definimos e vivemos as \"etapas\" da nossa própria vida!**\n\n3.  **Já parou para pensar como milhões de escolhas individuais, aparentemente independentes, se combinam para formar padrões sociais complexos e previsíveis, como tendências de moda, movimentos políticos ou até mesmo engarrafamentos, sem que ninguém esteja \"no comando\"? É a emergência de estruturas sociais a partir da ação coletiva!**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508418837
+  },
+  {
+    "data": "2025-11-07 06:40:29",
+    "assunto": "economia comportamental",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre economia comportamental:\n\n**Opção 1 (Viés de Perda):**\nSabia que a dor de perder R$100 é psicologicamente **duas vezes mais forte** do que a alegria de ganhar R$100? É por isso que as pessoas muitas vezes evitam riscos para não perder o que já têm!\n\n**Opção 2 (Efeito do Enquadramento):**\nVocê sabia que a forma como uma escolha é apresentada (o \"enquadramento\") pode mudar completamente sua decisão, mesmo que as opções sejam idênticas? Dizer que um produto é \"90% livre de gordura\" soa muito melhor do que dizer que tem \"10% de gordura\", não é?\n\n**Opção 3 (Viés do Presente):**\nPor que é tão difícil economizar dinheiro ou começar uma dieta, mesmo sabendo que é bom para o futuro? Nossos cérebros são programados para valorizar mais as recompensas imediatas do que as futuras, um fenômeno conhecido como \"viés do presente\"!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508429405
+  },
+  {
+    "data": "2025-11-07 06:40:36",
+    "assunto": "matemática",
+    "conteudo": "Claro! Aqui está uma:\n\n**Você sabia que, em um grupo de apenas 23 pessoas, a probabilidade de que duas delas compartilhem a mesma data de aniversário é de mais de 50%?** É um dos paradoxos da matemática que desafia a nossa intuição!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508436509
+  },
+  {
+    "data": "2025-11-07 06:40:43",
+    "assunto": "álgebra",
+    "conteudo": "Você sabia que a palavra **álgebra** vem do árabe \"al-jabr\", que significa \"a reunião das partes quebradas\" ou \"a restauração\"? É exatamente o que fazemos ao resolver uma equação: restauramos a ordem, juntando os termos para revelar o valor desconhecido de \"x\"!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508443313
+  },
+  {
+    "data": "2025-11-07 06:40:53",
+    "assunto": "geometria",
+    "conteudo": "Aqui estão algumas opções:\n\n**Opção 1 (Sobre Geometria Não-Euclidiana):**\n\"Você sabia que na geometria que rege nosso universo (Relatividade de Einstein), a soma dos ângulos internos de um triângulo nem sempre é 180 graus, e linhas 'paralelas' podem se encontrar ou divergir se o espaço for curvo? Nossa matemática muda com a forma do cosmo!\"\n\n**Opção 2 (Sobre Fractais):**\n\"Você sabia que um *fractal* é uma figura geométrica que se repete infinitamente em padrões cada vez menores? É como ter uma costa de praia com detalhes que nunca acabam, não importa o quanto você se aproxime!\"\n\n**Opção 3 (Sobre Dimensões):**\n\"Sabia que, embora vivamos em 3 dimensões espaciais, a geometria teórica explora a existência de 4, 5 ou até mais dimensões? Algumas teorias do universo, como a Teoria das Cordas, sugerem que essas dimensões extras podem estar 'enroladas' em escalas tão minúsculas que não as percebemos!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508453137
+  },
+  {
+    "data": "2025-11-07 06:41:01",
+    "assunto": "cálculo",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Você sabia que o cálculo diferencial nos permite 'congelar' um instante no tempo para medir a velocidade e aceleração exatas de qualquer objeto, mesmo que sua velocidade mude constantemente? É a mágica de ver o movimento em câmera lenta!\"**\n2.  **\"O cálculo integral consegue somar uma *infinidade* de pedaços minúsculos para descobrir a área de formas irregulares ou o volume de objetos complexos, algo impossível com a geometria tradicional.\"**\n3.  **\"Cálculo é a linguagem secreta que permite construir arranha-céus, enviar foguetes ao espaço, prever o clima e até projetar carros autônomos. É a matemática da mudança e da acumulação que molda nosso mundo moderno!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508461233
+  },
+  {
+    "data": "2025-11-07 06:41:09",
+    "assunto": "estatística",
+    "conteudo": "Aqui estão algumas opções de curiosidades científicas curtas e interessantes sobre estatística:\n\n**Opção 1 (Paradoxo dos Aniversários):**\n\"Sabia que em um grupo de apenas 23 pessoas, a probabilidade de duas delas fazerem aniversário no mesmo dia é maior que 50%? A estatística revela essas coincidências surpreendentes!\"\n\n**Opção 2 (O poder dos dados):**\n\"A estatística é a 'lupa' dos dados: ela transforma um monte de números confusos em informações claras, revelando padrões ocultos que guiam desde a descoberta de curas médicas até as recomendações que você recebe online.\"\n\n**Opção 3 (Lidando com a incerteza):**\n\"A estatística não prevê o futuro, mas é a ciência que nos dá a melhor chance de entender o que é mais provável de acontecer, ajudando a tomar decisões em tudo, da medicina à economia, no meio da incerteza.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508469664
+  },
+  {
+    "data": "2025-11-07 06:41:16",
+    "assunto": "probabilidade",
+    "conteudo": "Você sabia que, em um grupo de apenas 23 pessoas, a probabilidade de duas delas compartilharem o mesmo aniversário já é de mais de 50%? A probabilidade adora desafiar a nossa intuição!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508476501
+  },
+  {
+    "data": "2025-11-07 06:41:27",
+    "assunto": "teoria dos jogos",
+    "conteudo": "Aqui está uma:\n\n**Curiosidade:** A Teoria dos Jogos revela uma verdade paradoxal: a decisão mais racional para cada indivíduo *separado* pode levar a um resultado *pior para todos* os envolvidos, como ilustra o famoso 'Dilema do Prisioneiro'! É a ciência por trás de decisões estratégicas em tudo, da biologia à economia.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508487121
+  },
+  {
+    "data": "2025-11-07 06:41:36",
+    "assunto": "criptografia",
+    "conteudo": "Aqui estão algumas opções de curiosidades científicas sobre criptografia:\n\n**Opção 1 (Sobre o \"inquebrável\"):**\n\"Existe um método de criptografia *matematicamente inquebrável*, o 'one-time pad' (cifra de uso único). No entanto, sua complexidade (a chave deve ser do tamanho da mensagem e usada apenas uma vez) limita seu uso a situações de altíssimo sigilo, não ao seu WhatsApp!\"\n\n**Opção 2 (Sobre a magia do dia a dia):**\n\"Sabia que, graças à criptografia, você consegue enviar mensagens e dados secretos *para alguém que nunca encontrou* e sem ter trocado previamente uma senha secreta? Isso é possível pela criptografia de chave pública, a base da sua segurança bancária, WhatsApp e compras online!\"\n\n**Opção 3 (Sobre a escala dos cálculos):**\n\"A força da criptografia moderna reside na extrema dificuldade matemática de 'quebrar' seus códigos. Um computador comum levaria *bilhões de anos* para testar todas as combinações de uma chave criptográfica atual, tornando-a praticamente impenetrável.\"\n\n**Opção 4 (Sobre o futuro e o quântico):**\n\"A criptografia que protege seus dados online depende de problemas matemáticos *incrivelmente difíceis* para computadores clássicos resolverem. Mas, com a chegada dos computadores quânticos, muitos desses métodos podem se tornar vulneráveis, impulsionando a busca por uma 'criptografia pós-quântica'!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508496619
+  },
+  {
+    "data": "2025-11-07 06:41:44",
+    "assunto": "segurança digital",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **Curiosidade:** Quebrar uma chave de criptografia moderna por força bruta levaria **mais tempo do que a idade do universo** com os supercomputadores atuais.\n2.  **Curiosidade:** Impressionante: Mais de **90% dos ataques cibernéticos bem-sucedidos** começam com um erro humano, como clicar em um link de phishing ou usar uma senha fraca, não com um hack técnico complexo!\n3.  **Curiosidade:** Você sabia que existem vulnerabilidades de software tão secretas e valiosas que são vendidas por **milhões de dólares no mercado negro digital** – os chamados \"zero-days\" – antes mesmo de os desenvolvedores saberem que elas existem!\n4.  **Curiosidade:** A senha mais comum no mundo, \"123456\", pode ser decifrada **instantaneamente** por programas simples, e bilhões de contas ainda a usam.\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508504725
+  },
+  {
+    "data": "2025-11-07 06:41:54",
+    "assunto": "internet",
+    "conteudo": "Aqui estão algumas opções:\n\n1.  **A informação na internet viaja na velocidade da luz, mas *não é instantânea*!** Ela precisa percorrer milhares de quilômetros por cabos de fibra óptica (inclusive submarinos), o que gera um atraso físico minúsculo, mas real, conhecido como **latência**.\n\n2.  Cerca de **99% do tráfego da internet mundial** viaja por uma vasta rede *invisível* de mais de **1,3 milhão de quilômetros de cabos de fibra óptica**, estendidos no fundo dos oceanos – muitos deles mais finos que uma mangueira de jardim!\n\n3.  Quando você digita um endereço de site (como google.com), a internet consulta um \"catálogo telefônico\" gigante chamado **DNS (Sistema de Nomes de Domínio)** para traduzir o nome para um endereço IP numérico (como 172.217.160.142), antes mesmo de carregar a página!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508514398
+  },
+  {
+    "data": "2025-11-07 06:42:05",
+    "assunto": "redes neurais",
+    "conteudo": "**Você sabia que as redes neurais, a base da inteligência artificial moderna, aprendem de forma incrivelmente parecida com o nosso cérebro?**\n\nElas ajustam a \"força\" de suas conexões internas a cada nova informação, permitindo-lhes reconhecer padrões complexos, tomar decisões e até gerar conteúdo novo (como textos e imagens), sem nunca terem sido programadas explicitamente para cada tarefa!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508525064
+  },
+  {
+    "data": "2025-11-07 06:42:14",
+    "assunto": "machine learning",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre Machine Learning:\n\n**Opção 1 (Foco na aprendizagem por exemplos):**\n\"Você sabia que o Machine Learning permite que computadores aprendam a realizar tarefas complexas (como reconhecer rostos ou traduzir idiomas) *apenas por observar e analisar milhões de exemplos*, em vez de serem programados com regras explícitas para cada caso?\"\n\n**Opção 2 (Foco na melhoria contínua):**\n\"Máquinas que usam Machine Learning não são estáticas: elas podem *melhorar seu desempenho com a experiência*, aprendendo com cada novo dado que analisam, como um humano que pratica uma habilidade.\"\n\n**Opção 3 (Foco na analogia com o cérebro):**\n\"Muitos algoritmos de Machine Learning, especialmente as redes neurais, são *inspirados na estrutura e funcionamento do cérebro humano*, permitindo que computadores \"pensem\" de uma forma mais intuitiva para encontrar padrões.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508534477
+  },
+  {
+    "data": "2025-11-07 06:42:22",
+    "assunto": "deep learning",
+    "conteudo": "Aqui está uma curiosidade:\n\n\"Apesar de criado por humanos, o Deep Learning muitas vezes opera como uma 'caixa preta': nem seus próprios criadores conseguem explicar *como* ele chega a certas decisões complexas, apenas *o quê* ele decidiu.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508542242
+  },
+  {
+    "data": "2025-11-07 06:42:30",
+    "assunto": "visão computacional",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"A visão computacional não 'vê' o mundo como nós. Para ela, reconhecer um gato é analisar milhões de pixels e encontrar padrões complexos – uma tarefa que para nós é instintiva, mas para a IA é um desafio matemático gigantesco!\"**\n2.  **\"Sabia que a mesma tecnologia que desbloqueia seu celular com o rosto também ajuda carros autônomos a dirigir, médicos a detectar doenças e robôs a explorar outros planetas? A visão computacional está em todo lugar!\"**\n3.  **\"Diferente de nós, a visão computacional não 'vê' cores e formas, mas traduz tudo em números e padrões matemáticos. Isso a torna capaz de identificar objetos em milissegundos e até descobrir anomalias invisíveis ao olho humano!\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508550913
+  },
+  {
+    "data": "2025-11-07 06:42:37",
+    "assunto": "biometria",
+    "conteudo": "Você sabia que, mesmo gêmeos idênticos, que compartilham quase 100% do mesmo DNA, possuem impressões digitais completamente únicas e diferentes?\n\nIsso ocorre porque a formação das cristas de fricção nos dedos é influenciada não só pela genética, mas também por minúsculas variações ambientais no útero, como a pressão e o fluxo sanguíneo, tornando cada padrão um verdadeiro ID intransferível!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508557905
+  },
+  {
+    "data": "2025-11-07 06:42:47",
+    "assunto": "engenharia elétrica",
+    "conteudo": "Aqui estão algumas opções de curiosidades:\n\n1.  **A velocidade da eletricidade vs. dos elétrons:**\n    \"Você sabia que, embora a *informação* elétrica viaje quase à velocidade da luz em um fio, os elétrons que a transportam se movem bem lentamente, como num engarrafamento? É a onda de energia que é rápida!\"\n\n2.  **A complexidade dos chips:**\n    \"Um único chip de computador moderno pode abrigar bilhões de transistores minúsculos, cada um menor que a espessura de um fio de cabelo! São eles que permitem toda a nossa era digital.\"\n\n3.  **A origem da luz nos LEDs:**\n    \"Sabe como um LED (Diodo Emissor de Luz) produz luz? É através de um fenômeno quântico onde elétrons 'saltam' entre níveis de energia dentro de um semicondutor, liberando fótons (partículas de luz) no processo!\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508567277
+  },
+  {
+    "data": "2025-11-07 06:42:56",
+    "assunto": "engenharia civil",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre engenharia civil:\n\n1.  **\"Você sabia que arranha-céus e pontes gigantes são projetados para balançar?** Em vez de serem rígidos, eles absorvem a energia de ventos fortes e terremotos, flexionando-se para evitar a quebra e garantir a segurança!\"\n\n2.  **\"Sabia que o concreto romano, usado há mais de 2.000 anos, era tão durável que algumas estruturas ainda resistem hoje, inclusive debaixo d'água?** Engenheiros civis estudam sua composição única (com cinzas vulcânicas!) para desenvolver materiais do futuro!\"\n\n3.  **\"O concreto é o material fabricado pelo homem mais consumido no mundo, perdendo apenas para a água em volume!** É o alicerce invisível de quase toda a nossa infraestrutura, de edifícios a pontes e estradas.\"\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508576494
+  },
+  {
+    "data": "2025-11-07 06:43:08",
+    "assunto": "engenharia mecânica",
+    "conteudo": "Aqui estão algumas opções de curiosidades curtas e interessantes sobre Engenharia Mecânica:\n\n1.  **Refrigerador e Calor:** Você sabia que seu refrigerador não \"produz\" frio? Graças à engenharia mecânica, ele usa a termodinâmica para *mover* o calor de dentro para fora, desafiando a natureza para manter seus alimentos frescos!\n2.  **Elevador e Contrapesos:** Um elevador, graças à engenharia mecânica, gasta surpreendentemente pouca energia para mover toneladas. Ele usa um contrapeso que equilibra quase todo o peso da cabine, fazendo com que o motor precise apenas de uma força mínima para iniciar o movimento!\n3.  **Vibrações e Utilidade:** Engenheiros mecânicos não só evitam vibrações destrutivas, mas também as projetam para uso intencional em tecnologias como o ultrassom médico (para ver dentro do corpo) e sonares, transformando uma força potencialmente prejudicial em algo útil!\n4.  **O Voo dos Aviões:** Sabia que a engenharia mecânica é a chave para o voo? As asas de um avião são projetadas para manipular o fluxo de ar de tal forma que criam uma diferença de pressão que literalmente \"empurra\" a aeronave para cima, desafiando a gravidade!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508588847
+  },
+  {
+    "data": "2025-11-07 06:43:14",
+    "assunto": "engenharia aeroespacial",
+    "conteudo": "Aqui está uma:\n\n**Curiosidade:** Você sabia que, durante a reentrada na atmosfera terrestre, uma nave espacial enfrenta temperaturas tão extremas que podem ser **mais quentes que a superfície do Sol**? A engenharia aeroespacial resolve isso projetando escudos térmicos que se desintegram controladamente (num processo chamado ablação) para dissipar esse calor infernal e proteger a cápsula!\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508594850
+  },
+  {
+    "data": "2025-11-07 06:43:21",
+    "assunto": "engenharia ambiental",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes:\n\n1.  **\"Sabia que engenheiros ambientais usam milhões de microrganismos para \"comer\" a sujeira do esgoto nas estações de tratamento, transformando água poluída em segura para o meio ambiente?\"**\n2.  **\"Você sabia que a engenharia ambiental transforma o \"lixo\" que você descarta em recursos valiosos, como energia e novas matérias-primas, para criar uma economia sem desperdício?\"**\n3.  **\"Sabia que engenheiros ambientais criam tecnologias que \"limpam\" o ar que respiramos, capturando poluentes invisíveis que causam doenças e mudam o clima?\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508601727
+  },
+  {
+    "data": "2025-11-07 06:43:31",
+    "assunto": "engenharia de materiais",
+    "conteudo": "Aqui estão algumas opções curtas e interessantes sobre engenharia de materiais:\n\n1.  **\"Você sabia que engenheiros de materiais podem criar metais que 'lembram' sua forma? Ligas com memória de forma podem retornar ao seu estado original com um pouco de calor, mesmo após serem completamente dobradas!\"**\n\n2.  **\"Curiosidade: A diferença entre um material tão resistente quanto um diamante e outro tão maleável quanto um plástico pode estar apenas na forma como seus átomos estão arranjados! É a arte da engenharia de materiais manipular o invisível para resultados visíveis.\"**\n\n3.  **\"Você sabia que engenheiros de materiais buscam na natureza, como na super-resistência da teia de aranha ou na dureza da casca de uma ostra, a inspiração para criar materiais revolucionários que moldam o nosso dia a dia?\"**\n\n🔬 Fonte: Gemini (Google AI)",
+    "imagem": "",
+    "timestamp": 1762508611643
   }
 ]
