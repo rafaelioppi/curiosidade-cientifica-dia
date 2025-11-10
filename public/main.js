@@ -98,11 +98,14 @@ async function carregarCuriosidade() {
     });
 
     if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
-    const post = await res.json();
+
+    const texto = await res.text();
+    if (!texto) throw new Error('Resposta vazia do servidor.');
+
+    const post = JSON.parse(texto);
     todosOsPosts.unshift(post);
     renderizarPosts(todosOsPosts);
 
-    // ✅ Preencher campo com o assunto usado
     if (post.assunto && campoAssunto) {
       campoAssunto.value = post.assunto;
     }
@@ -113,6 +116,7 @@ async function carregarCuriosidade() {
     botaoNova.style.display = 'inline-block';
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   carregarHistorico();

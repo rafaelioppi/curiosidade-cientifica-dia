@@ -75,22 +75,29 @@ const assuntosPadrao = [
 ];
 
 app.post('/post', asyncHandler(async (req, res) => {
-  try {
-    let assunto = req.body.assunto?.trim();
+  let assunto = req.body.assunto?.trim();
 
-    if (!assunto) {
-      const index = Math.floor(Math.random() * assuntosPadrao.length);
-      assunto = assuntosPadrao[index];
-      console.log(`🎲 Assunto aleatório selecionado: ${assunto}`);
+  if (!assunto) {
+    const index = Math.floor(Math.random() * assuntosPadrao.length);
+    assunto = assuntosPadrao[index];
+    console.log(`🎲 Assunto aleatório selecionado: ${assunto}`);
+  }
+
+  try {
+    const novoPost = await gerarPost(assunto);
+
+    if (!novoPost || typeof novoPost !== 'object' || !novoPost.conteudo) {
+      console.warn('⚠️ Post gerado está vazio ou inválido.');
+      return res.status(500).json({ erro: 'Falha ao gerar conteúdo.', assunto });
     }
 
-    const novoPost = await gerarPost(assunto);
     res.json(novoPost);
   } catch (err) {
     console.error('❌ Erro ao gerar post:', err.message);
     res.status(500).json({ erro: 'Erro ao gerar post', detalhe: err.message });
   }
-}));
+  }));
+
 
 // 📜 Rota para retornar histórico
 app.get('/historico', (req, res) => {
