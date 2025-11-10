@@ -5,6 +5,9 @@ function renderizarPosts(posts) {
   conteudoEl.innerHTML = '';
 
   posts.forEach(post => {
+    // Ignorar posts de aviso
+    if (post.aviso) return;
+
     const col = document.createElement('div');
     col.className = 'col-card';
 
@@ -36,7 +39,7 @@ function renderizarPosts(posts) {
       wrapper.appendChild(dataEl);
     }
 
-    // ✅ Assunto, se disponível
+    // Assunto
     if (post.assunto) {
       const assuntoEl = document.createElement('p');
       assuntoEl.className = 'card-assunto';
@@ -46,13 +49,15 @@ function renderizarPosts(posts) {
       wrapper.appendChild(assuntoEl);
     }
 
-    // Texto do post (com quebras de linha preservadas)
-    const texto = document.createElement('p');
-    texto.className = 'card-text';
-    texto.innerHTML = post.conteudo.replace(/\n/g, '<br>');
-    wrapper.appendChild(texto);
+    // Texto
+    if (post.conteudo) {
+      const texto = document.createElement('p');
+      texto.className = 'card-text';
+      texto.innerHTML = post.conteudo.replace(/\n/g, '<br>');
+      wrapper.appendChild(texto);
+    }
 
-    // Imagem, se houver
+    // Imagem
     if (post.imagem) {
       const img = document.createElement('img');
       img.src = post.imagem;
@@ -72,14 +77,17 @@ async function carregarHistorico() {
   try {
     const res = await fetch('/historico');
     if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
-    todosOsPosts = await res.json();
+    const texto = await res.text();
+    if (!texto) throw new Error('Resposta vazia do servidor.');
+    todosOsPosts = JSON.parse(texto);
     renderizarPosts(todosOsPosts);
   } catch (err) {
     console.error('❌ Erro ao carregar histórico:', err);
+    alert('Erro ao carregar histórico. Tente novamente mais tarde.');
   }
 }
 
-// Carregar nova curiosidade com assunto
+// Carregar nova curiosidade
 async function carregarCuriosidade() {
   const loaderWrapper = document.getElementById('loader-wrapper');
   const botaoNova = document.getElementById('btn-nova');
@@ -103,6 +111,13 @@ async function carregarCuriosidade() {
     if (!texto) throw new Error('Resposta vazia do servidor.');
 
     const post = JSON.parse(texto);
+
+    // Se for um post de aviso, exibir alerta
+    if (post.aviso) {
+      alert(post.conteudo || 'Já existe um post para hoje.');
+      return;
+    }
+
     todosOsPosts.unshift(post);
     renderizarPosts(todosOsPosts);
 
@@ -111,12 +126,12 @@ async function carregarCuriosidade() {
     }
   } catch (err) {
     console.error('❌ Erro ao carregar curiosidade:', err);
+    alert('Não foi possível gerar uma nova curiosidade. Tente novamente mais tarde.');
   } finally {
     loaderWrapper.style.display = 'none';
     botaoNova.style.display = 'inline-block';
   }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   carregarHistorico();

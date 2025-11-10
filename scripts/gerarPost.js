@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-// 🔍 Verificar variáveis de ambiente
-if (!process.env.GEMINI_API_KEY || !process.env.UNSPLASH_ACCESS_KEY) {
-  console.error("❌ Variáveis de ambiente não definidas corretamente.");
+// 🔍 Verificar variável obrigatória
+if (!process.env.GEMINI_API_KEY) {
+  console.error("❌ Variável GEMINI_API_KEY não definida.");
   process.exit(1);
 }
 
@@ -31,16 +31,26 @@ async function gerarTextoComGemini(prompt) {
   return 'Curiosidade não disponível.';
 }
 
-// 🖼️ Função para buscar imagem no Unsplash
-async function buscarImagemUnsplash(assunto) {
+// 🖼️ Função para buscar imagem no Openverse
+async function buscarImagemOpenverse(assunto) {
   try {
-    const res = await axios.get('https://api.unsplash.com/photos/random', {
-      params: { query: assunto || 'science', orientation: 'landscape' },
-      headers: { Authorization: 'Client-ID ' + process.env.UNSPLASH_ACCESS_KEY }
+    const res = await axios.get('https://api.openverse.engineering/v1/images', {
+      params: {
+        q: assunto || 'science',
+        license: 'cc0,pdm,by',
+        page_size: 1
+      }
     });
-    return res.data?.urls?.regular || '';
+
+    const resultados = res.data?.results;
+    if (resultados && resultados.length > 0) {
+      return resultados[0].url || '';
+    } else {
+      console.warn('⚠️ Nenhuma imagem encontrada no Openverse para:', assunto);
+      return '';
+    }
   } catch (err) {
-    console.error('❌ Erro ao buscar imagem no Unsplash:', err.response?.data?.errors || err.message);
+    console.error('❌ Erro ao buscar imagem no Openverse:', err.response?.data?.message || err.message);
     return '';
   }
 }
@@ -50,7 +60,7 @@ async function gerarPost(assunto = '') {
   const tema = assunto.trim() ? ` sobre ${assunto.trim()}` : '';
   const prompt = `Crie uma curiosidade científica curta e interessante${tema}.`;
   const conteudo = await gerarTextoComGemini(prompt);
-  const imagem = await buscarImagemUnsplash(assunto);
+  const imagem = await buscarImagemOpenverse(assunto);
   const dataSP = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 
   const post = {
@@ -75,7 +85,14 @@ async function gerarPost(assunto = '') {
     const jaPostadoHoje = historico.some(p => p.data.startsWith(hoje));
     if (jaPostadoHoje) {
       console.log('✅ Já existe um post para hoje. Abortando geração.');
-      return;
+      return {
+        data: dataSP,
+        assunto,
+        conteudo: 'Já existe um post para hoje.',
+        imagem: '',
+        timestamp: Date.now(),
+        aviso: true
+      };
     }
 
     historico.push(post);
@@ -111,7 +128,6 @@ const assuntos = [
   "deep learning", "visão computacional", "biometria", "engenharia elétrica", "engenharia civil",
   "engenharia mecânica", "engenharia aeroespacial", "engenharia ambiental", "engenharia de materiais"
 ];
-
 // ✅ Executa apenas 1 post por dia
 if (require.main === module) {
   const assuntoAleatorio = assuntos[Math.floor(Math.random() * assuntos.length)];
