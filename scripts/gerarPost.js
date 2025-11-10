@@ -81,20 +81,7 @@ async function gerarPost(assunto = '') {
       historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
     }
 
-    const hoje = new Date().toISOString().slice(0, 10);
-    const jaPostadoHoje = historico.some(p => p.data.startsWith(hoje));
-    if (jaPostadoHoje) {
-      console.log('✅ Já existe um post para hoje. Abortando geração.');
-      return {
-        data: dataSP,
-        assunto,
-        conteudo: 'Já existe um post para hoje.',
-        imagem: '',
-        timestamp: Date.now(),
-        aviso: true
-      };
-    }
-
+    // 🔥 Removido o bloqueio de postagens múltiplas por dia
     historico.push(post);
     fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
     console.log("📜 Histórico salvo com sucesso. Total de posts:", historico.length);
@@ -104,6 +91,7 @@ async function gerarPost(assunto = '') {
 
   return post;
 }
+
 
 // ✅ Lista de assuntos
 const assuntos = [
@@ -129,9 +117,12 @@ const assuntos = [
   "engenharia mecânica", "engenharia aeroespacial", "engenharia ambiental", "engenharia de materiais"
 ];
 // ✅ Executa apenas 1 post por dia
+// 🚀 Executa sempre que o script for chamado diretamente
 if (require.main === module) {
   const assuntoAleatorio = assuntos[Math.floor(Math.random() * assuntos.length)];
-  gerarPost(assuntoAleatorio);
+  gerarPost(assuntoAleatorio).then(post => {
+    console.log("🧠 Curiosidade gerada:", post.conteudo);
+  });
 }
 
 module.exports = gerarPost;
