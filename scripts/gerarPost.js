@@ -9,6 +9,10 @@ if (!process.env.GEMINI_API_KEY || !process.env.UNSPLASH_ACCESS_KEY) {
   process.exit(1);
 }
 
+// 📁 Caminho do histórico
+const historicoDir = path.join(__dirname, '../data');
+const historicoPath = path.join(historicoDir, 'posts.json');
+
 // 🔬 Função para gerar curiosidade com Gemini
 async function gerarTextoComGemini(prompt) {
   try {
@@ -41,10 +45,6 @@ async function buscarImagemUnsplash(assunto) {
   }
 }
 
-// 📁 Caminho do histórico
-const historicoDir = path.join(__dirname, '../data');
-const historicoPath = path.join(historicoDir, 'posts.json');
-
 // 🚀 Função principal para gerar um post
 async function gerarPost(assunto = '') {
   const tema = assunto.trim() ? ` sobre ${assunto.trim()}` : '';
@@ -71,6 +71,13 @@ async function gerarPost(assunto = '') {
       historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
     }
 
+    const hoje = new Date().toISOString().slice(0, 10);
+    const jaPostadoHoje = historico.some(p => p.data.startsWith(hoje));
+    if (jaPostadoHoje) {
+      console.log('✅ Já existe um post para hoje. Abortando geração.');
+      return;
+    }
+
     historico.push(post);
     fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
     console.log("📜 Histórico salvo com sucesso. Total de posts:", historico.length);
@@ -81,7 +88,7 @@ async function gerarPost(assunto = '') {
   return post;
 }
 
-// ✅ Executa em lote se chamado diretamente
+// ✅ Lista de assuntos
 const assuntos = [
   "buracos negros", "inteligência artificial", "evolução humana", "física quântica", "neurociência",
   "teoria das cordas", "energia escura", "matéria escura", "DNA", "RNA", "vacinas", "imunologia",
@@ -105,26 +112,10 @@ const assuntos = [
   "engenharia mecânica", "engenharia aeroespacial", "engenharia ambiental", "engenharia de materiais"
 ];
 
+// ✅ Executa apenas 1 post por dia
 if (require.main === module) {
-  (async () => {
-    if (!fs.existsSync(historicoDir)) {
-      fs.mkdirSync(historicoDir);
-    }
-
-    let historico = [];
-    if (fs.existsSync(historicoPath)) {
-      historico = JSON.parse(fs.readFileSync(historicoPath, 'utf-8'));
-    }
-
-    for (const assunto of assuntos) {
-      console.log(`🔄 Gerando post sobre: ${assunto}`);
-      const post = await gerarPost(assunto);
-      historico.push(post);
-      fs.writeFileSync(historicoPath, JSON.stringify(historico, null, 2));
-    }
-
-    console.log("✅ Todos os posts foram gerados e salvos. Total:", historico.length);
-  })();
+  const assuntoAleatorio = assuntos[Math.floor(Math.random() * assuntos.length)];
+  gerarPost(assuntoAleatorio);
 }
 
 module.exports = gerarPost;
