@@ -109,7 +109,20 @@ app.get('/historico', (req, res) => {
   }
 
   try {
-    let posts = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const conteudo = fs.readFileSync(filePath, 'utf-8');
+
+    // Verifica se o conteúdo parece ser HTML (erro comum)
+    if (conteudo.trim().startsWith('<')) {
+      console.warn('⚠️ Conteúdo inválido detectado no posts.json (HTML encontrado).');
+      return res.status(500).json({ erro: 'Arquivo de histórico corrompido. Conteúdo inválido.' });
+    }
+
+    let posts = JSON.parse(conteudo);
+    if (!Array.isArray(posts)) {
+      console.warn('⚠️ posts.json não contém um array.');
+      return res.status(500).json({ erro: 'Formato inválido no histórico.' });
+    }
+
     posts.sort((a, b) => new Date(b.data) - new Date(a.data));
 
     const { data } = req.query;

@@ -76,16 +76,30 @@ function renderizarPosts(posts) {
 async function carregarHistorico() {
   try {
     const res = await fetch('/historico');
-    if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
+    if (!res.ok) {
+      const erro = await res.json();
+      console.warn('⚠️ Erro do servidor:', erro.erro || 'Erro desconhecido');
+      throw new Error(erro.erro || `Erro HTTP ${res.status}`);
+    }
+
     const texto = await res.text();
-    if (!texto) throw new Error('Resposta vazia do servidor.');
-    todosOsPosts = JSON.parse(texto);
+    if (!texto || texto.trim().startsWith('<')) {
+      throw new Error('Resposta inválida ou corrompida do servidor.');
+    }
+
+    const posts = JSON.parse(texto);
+    if (!Array.isArray(posts)) {
+      throw new Error('Formato inesperado no histórico.');
+    }
+
+    todosOsPosts = posts;
     renderizarPosts(todosOsPosts);
   } catch (err) {
-    console.error('❌ Erro ao carregar histórico:', err);
+    console.error('❌ Erro ao carregar histórico:', err.message);
     alert('Erro ao carregar histórico. Tente novamente mais tarde.');
   }
 }
+
 
 // Carregar nova curiosidade
 async function carregarCuriosidade() {
