@@ -63,7 +63,7 @@ body, html {
 }
 
 .imagem-post {
-  width: 100%;
+  width: 350px;
   height: 250px;
   object-fit: contain; /* exibe a imagem inteira sem cortar */
   background-color: #f0f0f0; /* fundo neutro para imagens menores */
