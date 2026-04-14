@@ -1,11 +1,15 @@
-require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+require('dotenv').config({ path: path.join(__dirname, '../.env') }); // agora funciona
 
-// 🔍 Verificar variável obrigatória
+// 🔍 Verificar variáveis obrigatórias
 if (!process.env.GEMINI_API_KEY || !process.env.UNSPLASH_ACCESS_KEY) {
-  console.error("❌ Variáveis de ambiente não definidas: GEMINI_API_KEY ou UNSPLASH_API_KEY.");
+  console.error("❌ Variáveis de ambiente não definidas: GEMINI_API_KEY ou UNSPLASH_ACCESS_KEY.");
+  console.log("🔎 Debug:", {
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY ? "OK" : "MISSING",
+    UNSPLASH_ACCESS_KEY: process.env.UNSPLASH_ACCESS_KEY ? "OK" : "MISSING"
+  });
   process.exit(1);
 }
 
@@ -102,7 +106,7 @@ async function gerarPost(assunto = '') {
 }
 
 // ✅ Lista de assuntos
-const assuntos = [ /* ... mesma lista de assuntos ... */ ];
+const assuntos = ["física", "biologia", "química", "astronomia", "tecnologia"];
 
 // 🚀 Executa sempre que o script for chamado diretamente
 if (require.main === module) {
